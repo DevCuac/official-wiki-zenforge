@@ -1,11 +1,147 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading... | ZenForge Studio</title>
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+    <script>
+      const theme = localStorage.getItem("starlight-theme");
+      if (
+        theme === "dark" ||
+        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
 
-<Layout>
-	<Welcome />
-</Layout>
+
+    <script>
+      setTimeout(() => {
+        window.location.replace("/en/");
+      }, 5500);
+    </script>
+  </head>
+
+  <body
+    class="flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-neutral-900 dark:text-white"
+  >
+    <main class="flex flex-col items-center gap-10 px-6 text-center">
+      <!-- Logo -->
+      <div
+        class="flex flex-col items-center gap-6 animate-[fadeInDown_0.8s_ease-out]"
+      >
+        <div class="relative w-28 h-28">
+          <div
+            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-sky-400 to-sky-700 opacity-10 animate-[pulse_2s_ease-in-out_infinite]"
+          ></div>
+          <div
+            class="relative flex h-full w-full items-center justify-center text-sky-400 drop-shadow-[0_4px_12px_rgba(79,179,246,0.3)]"
+          >
+          <img src="/public/logo.svg
+          " alt="">
+
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h1 class="text-3xl font-bold tracking-tight">ZenForge Studio</h1>
+          <p class="text-gray-500 dark:text-gray-400 font-medium">
+            Technology · Design · Innovation
+          </p>
+        </div>
+      </div>
+
+      <!-- Spinner -->
+      <div
+        class="flex flex-col items-center gap-8 animate-[fadeInUp_0.8s_ease-out_0.2s_both]"
+      >
+        <div class="relative w-20 h-20">
+          <div
+            class="absolute inset-0 border-4 border-gray-200 dark:border-neutral-700 border-t-sky-400 rounded-full animate-spin"
+          ></div>
+          <div
+            class="absolute -inset-2 border-4 border-transparent border-t-sky-400 rounded-full opacity-30 animate-[spin_1s_linear_infinite_reverse] blur-md"
+          ></div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <h2 class="text-xl font-semibold">Preparing your experience</h2>
+          <p class="text-gray-500 dark:text-gray-400">
+            Please wait a moment...
+          </p>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div
+        class="w-72 h-1 bg-gray-200 dark:bg-neutral-700 rounded-full overflow-hidden animate-[fadeInUp_0.8s_ease-out_0.4s_both]"
+      >
+        <div
+          class="h-full bg-gradient-to-r from-sky-400 to-sky-700 animate-[progress_1.5s_ease-in-out_infinite]"
+        ></div>
+      </div>
+
+      <!-- Footer -->
+      <p
+        class="text-sm text-gray-500 dark:text-gray-400 animate-[fadeIn_1s_ease-out_0.6s_both]"
+      >
+        If you are not redirected automatically,
+        <a
+          href="/en/"
+          class="text-sky-400 font-semibold hover:text-sky-600 transition-colors"
+          >click here</a
+        >.
+      </p>
+    </main>
+
+    <style>
+@import "tailwindcss";
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.2;
+          transform: scale(1.05);
+        }
+      }
+      @keyframes progress {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(400%);
+        }
+      }
+    </style>
+  </body>
+</html>

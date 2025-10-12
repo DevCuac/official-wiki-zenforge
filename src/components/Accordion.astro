@@ -1,0 +1,148 @@
+---
+interface Props {
+  summary: string;
+  icon?: string;
+}
+
+const { summary, icon = "▼" } = Astro.props;
+---
+
+<details class="zen-accordion not-prose">
+  <summary>
+    <span class="accordion-title">{summary}</span>
+    <span class="accordion-icon" aria-hidden="true">{icon}</span>
+  </summary>
+  <div class="accordion-content">
+    <slot />
+  </div>
+</details>
+
+<style>
+  .zen-accordion {
+    margin: 1.5rem 0;
+    border: 1px solid var(--sl-color-border);
+    border-radius: var(--sl-border-radius);
+    background: var(--sl-color-gray-1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+
+  .zen-accordion:hover {
+    border-color: var(--sl-color-border-accent);
+    box-shadow: var(--sl-shadow-sm);
+  }
+
+  .zen-accordion summary {
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    font-family: var(--sl-font-system);
+    color: var(--sl-color-black);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    user-select: none;
+    list-style: none;
+  }
+
+  .zen-accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .zen-accordion summary:hover {
+    color: var(--sl-color-accent);
+    background: var(--sl-color-gray-2);
+  }
+
+  .zen-accordion summary:focus-visible {
+    outline: 2px solid var(--sl-color-accent);
+    outline-offset: -2px;
+  }
+
+  .accordion-title {
+    flex: 1;
+    font-size: 1rem;
+  }
+
+  .accordion-icon {
+    flex-shrink: 0;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-5);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 1rem;
+  }
+
+  .zen-accordion[open] .accordion-icon {
+    transform: rotate(180deg);
+    color: var(--sl-color-accent);
+  }
+
+  .accordion-content {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    color: var(--sl-color-text);
+    line-height: 1.7;
+    border-top: 1px solid var(--sl-color-border);
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .accordion-content > :first-child {
+    margin-top: 1rem;
+  }
+
+  .accordion-content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .accordion-content :global(strong) {
+    color: var(--sl-color-black);
+    font-weight: 600;
+  }
+
+  .accordion-content :global(code) {
+    background: var(--sl-color-bg-inline-code);
+    color: var(--sl-color-text-accent);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    border: 1px solid var(--sl-color-border);
+    font-weight: 500;
+    font-family: var(--sl-font-mono);
+  }
+
+  .accordion-content :global(a) {
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+  }
+
+  .accordion-content :global(a:hover) {
+    color: var(--sl-color-accent-high);
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .zen-accordion summary {
+      padding: 0.875rem 1.25rem;
+    }
+
+    .accordion-content {
+      padding: 0 1.25rem 1rem 1.25rem;
+    }
+
+    .accordion-title {
+      font-size: 0.9375rem;
+    }
+  }
+</style>

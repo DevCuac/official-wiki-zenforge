@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  /* Colores Zenforge */
+  --color-accent-50: #e8f6fe;
+  --color-accent-100: #b8e3fc;
+  --color-accent-200: #88d0fa;
+  --color-accent-300: #58bdf8;
+  --color-accent-400: #4fb3f6;
+  --color-accent-500: #187bcd;
+  --color-accent-600: #1568b0;
+  --color-accent-700: #125593;
+  --color-accent-800: #0f4276;
+  --color-accent-900: #0c2f59;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #2a2a2a;
+  --color-gray-900: #1e1e1e;
+
+  /* Tipografías */
+  --font-family-sans: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-family-display: 'Inter', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+@layer base {
+  /* TEMA CLARO */
+  :root {
+    /* Colores principales Starlight */
+    --sl-color-accent: #4fb3f6;
+    --sl-color-accent-low: #187bcd;
+    --sl-color-accent-high: #88d0fa;
+    
+    /* Colores de fondo y texto */
+    --sl-color-white: #ffffff;
+    --sl-color-black: #1e1e1e;
+    
+    --sl-color-gray-1: #fafafa;
+    --sl-color-gray-2: #f3f4f6;
+    --sl-color-gray-3: #e5e7eb;
+    --sl-color-gray-4: #9ca3af;
+    --sl-color-gray-5: #6b7280;
+    --sl-color-gray-6: #374151;
+    
+    --sl-color-text: #1e1e1e;
+    --sl-color-text-accent: #4fb3f6;
+    
+    /* Fondos específicos */
+    --sl-color-bg: #ffffff;
+    --sl-color-bg-nav: #fafafa;
+    --sl-color-bg-sidebar: #fafafa;
+    --sl-color-bg-inline-code: #f3f4f6;
+    
+    /* Bordes */
+    --sl-color-border: #e5e7eb;
+    --sl-color-border-accent: #4fb3f6;
+    
+    /* Sombras */
+    --sl-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --sl-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    
+    /* Syntax highlighting - modo claro */
+    --sl-color-code-bg: #f8f9fa;
+    --sl-color-code-keyword: #9d4edd;
+    --sl-color-code-function: #0077cc;
+    --sl-color-code-string: #22863a;
+    --sl-color-code-number: #d73a49;
+    --sl-color-code-comment: #6a737d;
+    --sl-color-code-operator: #005cc5;
+    
+    /* Tipografías */
+    --sl-font: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --sl-font-system: 'Inter', system-ui, sans-serif;
+    --sl-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    
+    /* Border radius */
+    --sl-border-radius: 0.5rem;
+  }
+  
+  /* TEMA OSCURO */
+  :root[data-theme='dark'] {
+    --sl-color-accent: #4fb3f6;
+    --sl-color-accent-low: #187bcd;
+    --sl-color-accent-high: #88d0fa;
+    
+    /* Fondos oscuros */
+    --sl-color-white: #1e1e1e;
+    --sl-color-black: #ffffff;
+    
+    --sl-color-gray-1: #2a2a2a;
+    --sl-color-gray-2: #333333;
+    --sl-color-gray-3: #404040;
+    --sl-color-gray-4: #525252;
+    --sl-color-gray-5: #737373;
+    --sl-color-gray-6: #d4d4d4;
+    
+    --sl-color-text: #e5e7eb;
+    --sl-color-text-accent: #88d0fa;
+    
+    /* Fondos específicos oscuros */
+    --sl-color-bg: #1e1e1e;
+    --sl-color-bg-nav: #2a2a2a;
+    --sl-color-bg-sidebar: #2a2a2a;
+    --sl-color-bg-inline-code: #333333;
+    
+    /* Bordes oscuros */
+    --sl-color-border: #404040;
+    --sl-color-border-accent: #4fb3f6;
+    
+    /* Sombras para modo oscuro */
+    --sl-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --sl-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    
+    /* Syntax highlighting - modo oscuro */
+    --sl-color-code-bg: #2a2a2a;
+    --sl-color-code-keyword: #c792ea;
+    --sl-color-code-function: #82aaff;
+    --sl-color-code-string: #c3e88d;
+    --sl-color-code-number: #f78c6c;
+    --sl-color-code-comment: #676e95;
+    --sl-color-code-operator: #89ddff;
+  }
+
+  /* Tipografías base */
+  body {
+    font-family: var(--sl-font);
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--sl-color-text);
+    background-color: var(--sl-color-bg);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sl-font-system);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--sl-color-black);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  code {
+    font-family: var(--sl-font-mono);
+    font-size: 0.9em;
+  }
+
+  /* Links con soporte de temas */
+  a {
+    color: var(--sl-color-text-accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  a:hover {
+    color: var(--sl-color-accent-high);
+    text-decoration: underline;
+  }
+}
+
+@layer components {
+  /* Cards con soporte de ambos temas */
+  .card {
+    background: var(--sl-color-gray-1);
+    border: 1px solid var(--sl-color-border);
+    border-radius: var(--sl-border-radius);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    border-color: var(--sl-color-border-accent);
+    box-shadow: var(--sl-shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  /* Bloques de código con soporte de temas */
+  pre {
+    border-radius: var(--sl-border-radius);
+    border: 1px solid var(--sl-color-border);
+    padding: 1.25rem;
+    overflow-x: auto;
+    background: var(--sl-color-code-bg) !important;
+    box-shadow: var(--sl-shadow-sm);
+    margin: 1.5rem 0;
+  }
+  
+  pre code {
+    background: transparent !important;
+    color: var(--sl-color-text) !important;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    display: block;
+  }
+  
+  /* Syntax highlighting básico */
+  pre code .token.keyword,
+  pre code .token.class-name {
+    color: var(--sl-color-code-keyword) !important;
+  }
+  
+  pre code .token.function {
+    color: var(--sl-color-code-function) !important;
+  }
+  
+  pre code .token.string,
+  pre code .token.attr-value {
+    color: var(--sl-color-code-string) !important;
+  }
+  
+  pre code .token.number,
+  pre code .token.boolean {
+    color: var(--sl-color-code-number) !important;
+  }
+  
+  pre code .token.comment {
+    color: var(--sl-color-code-comment) !important;
+    font-style: italic;
+  }
+  
+  pre code .token.operator,
+  pre code .token.punctuation {
+    color: var(--sl-color-code-operator) !important;
+  }
+  
+  code:not(pre code) {
+    background: var(--sl-color-bg-inline-code);
+    color: var(--sl-color-text);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+    border: 1px solid var(--sl-color-border);
+    font-weight: 500;
+  }
+  
+  /* Mejora visual para el lenguaje del código */
+  pre[class*="language-"]::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--sl-color-gray-5);
+    text-transform: uppercase;
+    font-family: var(--sl-font);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  
+  pre {
+    position: relative;
+  }
+  
+  /* Bloques aside con soporte de temas */
+  .starlight-aside {
+    border-radius: var(--sl-border-radius);
+    border-left-width: 4px;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    background: var(--sl-color-gray-1);
+    border: 1px solid var(--sl-color-border);
+  }
+  
+  .starlight-aside--note {
+    border-left-color: #4fb3f6;
+    background: var(--sl-color-gray-1);
+  }
+  
+  .starlight-aside--tip {
+    border-left-color: #22c55e;
+    background: var(--sl-color-gray-1);
+  }
+  
+  .starlight-aside--caution {
+    border-left-color: #eab308;
+    background: var(--sl-color-gray-1);
+  }
+  
+  .starlight-aside--danger {
+    border-left-color: #ef4444;
+    background: var(--sl-color-gray-1);
+  }
+  
+  /* Tablas con soporte de temas */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    border-radius: var(--sl-border-radius);
+    overflow: hidden;
+    border: 1px solid var(--sl-color-border);
+    background: var(--sl-color-bg);
+  }
+  
+  thead {
+    background: var(--sl-color-accent);
+    color: white;
+  }
+  
+  thead th {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+  }
+  
+  th, td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--sl-color-border);
+    color: var(--sl-color-text);
+  }
+  
+  thead th {
+    color: white;
+    border-bottom: none;
+  }
+  
+  tbody tr {
+    background: var(--sl-color-bg);
+    transition: background-color 0.2s ease;
+  }
+  
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tbody tr:hover {
+    background: var(--sl-color-gray-1);
+  }
+  
+  /* Alinear primera columna a la izquierda */
+  td:first-child,
+  th:first-child {
+    padding-left: 1.5rem;
+  }
+  
+  td:last-child,
+  th:last-child {
+    padding-right: 1.5rem;
+  }
+  
+  /* Botones con soporte de temas */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--sl-color-accent);
+    color: white;
+    border-radius: var(--sl-border-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--sl-color-accent-low);
+    transform: translateY(-1px);
+    box-shadow: var(--sl-shadow-md);
+  }
+  
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Scrollbar personalizado con soporte de temas */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--sl-color-gray-2);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--sl-color-gray-4);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--sl-color-accent);
+  }
+}
+
+@layer utilities {
+  /* Utilidades personalizadas */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-low) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}

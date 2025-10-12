@@ -1,0 +1,148 @@
+---
+title: "Introduction to ZenRewards"
+description: "¡Bienvenido a ZenRewards! Descubre cómo este plugin puede transformar la lealtad de tus jugadores y potenciar la actividad en tu servidor."
+---
+import Callout from '~/components/Callout.astro';
+import { Aside, Card, CardGrid, LinkCard, Steps, FileTree } from '@astrojs/starlight/components';
+
+¡Bienvenidos a la wiki oficial de **ZenRewards**! Este plugin ha sido diseñado para transformar la conexión diaria de tus jugadores en una emocionante rutina llena de premios. Prepárate para una experiencia donde la lealtad y la constancia se recompensan, creando una comunidad más activa y comprometida.
+
+## Primeros Pasos
+
+Navega a las secciones clave para empezar a configurar tu servidor.
+
+<CardGrid>
+  <LinkCard title="Instalación" href="02-install" description="Aprende a instalar ZenRewards en tu servidor" />
+  <LinkCard title="Comandos" href="05-commands" description="Todos los comandos disponibles" />
+  <LinkCard title="Menu" href="04-menu" description="Personaliza el menú de recompensas" />
+  <LinkCard title="Placeholders" href="07-placeholders" description="Variables dinámicas con PlaceholderAPI" />
+</CardGrid>
+
+## Características Principales
+
+<CardGrid>
+  <Card title="Sistema de Recompensas" icon="gift">
+    Menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango.
+  </Card>
+  
+  <Card title="Sistema de Rachas" icon="star">
+    Premia a los jugadores por su constancia al conectarse días seguidos. Crea hábitos y fideliza tu comunidad.
+  </Card>
+  
+  <Card title="PlaceholderAPI" icon="puzzle">
+    Integración completa con variables dinámicas para mostrar información en cualquier parte de tu servidor.
+  </Card>
+  
+  <Card title="Multi-versión" icon="rocket">
+    Compatible desde 1.8.8 hasta 1.21.x y futuras versiones gracias a XSeries.
+  </Card>
+</CardGrid>
+
+## Guía de Inicio Rápido
+
+Sigue estos simples pasos para tener ZenRewards funcionando en minutos.
+
+<Steps>
+
+1. **Descargar el Plugin**
+   
+   Obtén la última versión del archivo `.jar` desde nuestra página de lanzamiento oficial.
+
+2. **Instalar en tu Servidor**
+   
+   Coloca el archivo `ZenRewards.jar` en la carpeta `plugins` de tu servidor.
+
+   :::tip[¡Activa los Placeholders!]
+   Si tienes **PlaceholderAPI** instalado (¡muy recomendado!), las variables como `%zenrewards_streak_current%` se activarán automáticamente.
+   :::
+
+3. **Reiniciar y Configurar**
+   
+   Reinicia tu servidor por completo. Se generará la carpeta `ZenRewards` con todos los archivos de configuración listos para que los personalices a tu gusto.
+
+</Steps>
+
+## Conceptos Clave del Plugin
+
+ZenRewards se basa en dos sistemas principales que trabajan juntos para fomentar la retención de jugadores.
+
+### Menú de Recompensas (`/rewards`)
+
+El corazón del plugin. Un menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango. Los ítems son inteligentes y cambian su apariencia según su estado (disponible, en cooldown, etc.).
+
+### Sistema de Rachas (`/streak`)
+
+La joya de la corona. Premia a los jugadores por su constancia al conectarse días seguidos. Este sistema es clave para crear un hábito de conexión y construir una comunidad leal.
+
+## Estructura de Archivos Generada
+
+Al iniciarse por primera vez, ZenRewards creará la siguiente estructura de carpetas y archivos.
+
+<FileTree>
+
+- ZenRewards/
+  - playerdata/
+    - uuid-del-jugador.yml
+  - **config.yml** Configuración principal
+  - menu.yml Configuración del menú de recompensas
+  - rewards.yml Definición de todas las recompensas
+  - streak-menu.yml Configuración del menú de rachas
+  - streaks.yml Configuración del sistema de rachas
+
+</FileTree>
+
+## Placeholders Destacados
+
+Gracias a la integración con PlaceholderAPI, puedes mostrar información dinámica en cualquier parte de tu servidor.
+
+| Placeholder | Descripción | Tags |
+|-------------|-------------|------|
+| `%zenrewards_streak_current%` | Muestra el número de días de racha de conexión actual del jugador | PAPI, Racha |
+| `%zenrewards_cooldown_daily_reward%` | Muestra el tiempo restante para la recompensa con ID 'daily_reward'. Si está disponible, muestra "Ready" | PAPI, Cooldown |
+| `%zenrewards_total_claimed%` | Total de recompensas reclamadas por el jugador | PAPI, Estadísticas |
+
+:::note[Placeholder Personalizable]
+Puedes cambiar el ID `daily_reward` por el ID de cualquier recompensa configurada en `rewards.yml`.
+:::
+
+## Preguntas Frecuentes
+
+### ¿Este plugin funciona en mi versión de Minecraft?
+
+¡Sí! ZenRewards está construido para ser retrocompatible. Funciona desde la versión **1.8.8 hasta la 1.21.x** y futuras. Utilizamos la librería XSeries para manejar las diferencias de materiales y sonidos entre versiones de forma automática.
+
+### ¿Afecta al rendimiento del servidor (TPS)?
+
+No. Las operaciones clave, como la actualización de los menús y el manejo de datos, están optimizadas. El sistema de actualización de cooldowns en tiempo real solo se activa para los jugadores que tienen el menú abierto, evitando cualquier carga innecesaria.
+
+### ¿Puedo personalizar los premios?
+
+Absolutamente. Todos los premios, cooldowns, mensajes y apariencias están definidos en archivos YAML fáciles de editar. Consulta la sección de [Configuración](03-config) para más detalles.
+
+### ¿Soporta múltiples idiomas?
+
+Sí. Todos los mensajes son configurables en `config.yml` y puedes traducirlos al idioma que prefieras. Además, soporta colores y formato usando códigos de Minecraft estándar.
+
+:::tip[¿Necesitas ayuda?]
+Únete a nuestro [Discord](https://discord.gg/zenforge) para soporte directo y comparte tus configuraciones con la comunidad.
+:::
+
+<Callout type="info" title="Información importante">
+  Este es un callout de información con ícono y título.
+</Callout>
+
+<Callout type="warning">
+  Callout de advertencia sin título.
+</Callout>
+
+<Callout type="success" title="¡Éxito!" icon={false}>
+  Callout sin ícono visible.
+</Callout>
+
+<Callout type="danger" title="¡Cuidado!">
+  Puedes usar **negrita**, `código` y [enlaces](/).
+</Callout>
+
+<Callout type="tip" title="Consejo Pro">
+  Los callouts se ven genial en ambos temas.
+</Callout>
