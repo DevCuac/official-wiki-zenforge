@@ -61,27 +61,6 @@ export default defineConfig({
               },
               link: '/introduccion/que-es-zenforge/',
             },
-            { 
-              label: 'Filosofía y visión',
-              translations: {
-                en: 'Philosophy and Vision',
-              },
-              link: '/introduccion/filosofia/',
-            },
-            { 
-              label: 'Tecnologías principales',
-              translations: {
-                en: 'Main Technologies',
-              },
-              link: '/introduccion/tecnologias/',
-            },
-            { 
-              label: 'Estructura del proyecto',
-              translations: {
-                en: 'Project Structure',
-              },
-              link: '/introduccion/estructura/',
-            },
           ],
         },
         {
