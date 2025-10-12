@@ -1,147 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loading... | ZenForge Studio</title>
-
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando... | ZenForge Studio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <script>
-      const theme = localStorage.getItem("starlight-theme");
-      if (
-        theme === "dark" ||
-        (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
+      const theme = localStorage.getItem('starlight-theme');
+      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     </script>
-
-
+    
     <script>
-      setTimeout(() => {
-        window.location.replace("/en/");
-      }, 5500);
+      if (window.location.pathname === '/' || window.location.pathname === '') {
+        const lang = localStorage.getItem('starlight-lang');
+        const browserLang = navigator.language.split('-')[0];
+        
+        let targetPath;
+        if (lang === 'en' || (!lang && browserLang === 'en')) {
+          targetPath = '/en/';
+        } else {
+          targetPath = '/es/';
+        }
+
+        setTimeout(() => {
+          window.location.href = targetPath;
+        }, 2500);
+      }
     </script>
-  </head>
-
-  <body
-    class="flex min-h-screen flex-col items-center justify-center bg-white text-gray-900 transition-colors duration-300 dark:bg-neutral-900 dark:text-white"
-  >
-    <main class="flex flex-col items-center gap-10 px-6 text-center">
-      <!-- Logo -->
-      <div
-        class="flex flex-col items-center gap-6 animate-[fadeInDown_0.8s_ease-out]"
-      >
-        <div class="relative w-28 h-28">
-          <div
-            class="absolute inset-0 rounded-3xl bg-gradient-to-br from-sky-400 to-sky-700 opacity-10 animate-[pulse_2s_ease-in-out_infinite]"
-          ></div>
-          <div
-            class="relative flex h-full w-full items-center justify-center text-sky-400 drop-shadow-[0_4px_12px_rgba(79,179,246,0.3)]"
-          >
-          <img src="/public/logo.svg
-          " alt="">
-
-          </div>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h1 class="text-3xl font-bold tracking-tight">ZenForge Studio</h1>
-          <p class="text-gray-500 dark:text-gray-400 font-medium">
-            Technology · Design · Innovation
-          </p>
-        </div>
-      </div>
-
-      <!-- Spinner -->
-      <div
-        class="flex flex-col items-center gap-8 animate-[fadeInUp_0.8s_ease-out_0.2s_both]"
-      >
-        <div class="relative w-20 h-20">
-          <div
-            class="absolute inset-0 border-4 border-gray-200 dark:border-neutral-700 border-t-sky-400 rounded-full animate-spin"
-          ></div>
-          <div
-            class="absolute -inset-2 border-4 border-transparent border-t-sky-400 rounded-full opacity-30 animate-[spin_1s_linear_infinite_reverse] blur-md"
-          ></div>
-        </div>
-        <div class="flex flex-col gap-1">
-          <h2 class="text-xl font-semibold">Preparing your experience</h2>
-          <p class="text-gray-500 dark:text-gray-400">
-            Please wait a moment...
-          </p>
-        </div>
-      </div>
-
-      <!-- Progress bar -->
-      <div
-        class="w-72 h-1 bg-gray-200 dark:bg-neutral-700 rounded-full overflow-hidden animate-[fadeInUp_0.8s_ease-out_0.4s_both]"
-      >
-        <div
-          class="h-full bg-gradient-to-r from-sky-400 to-sky-700 animate-[progress_1.5s_ease-in-out_infinite]"
-        ></div>
-      </div>
-
-      <!-- Footer -->
-      <p
-        class="text-sm text-gray-500 dark:text-gray-400 animate-[fadeIn_1s_ease-out_0.6s_both]"
-      >
-        If you are not redirected automatically,
-        <a
-          href="/en/"
-          class="text-sky-400 font-semibold hover:text-sky-600 transition-colors"
-          >click here</a
-        >.
-      </p>
-    </main>
-
+    
     <style>
-@import "tailwindcss";
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+
+        :root {
+            --sl-color-bg: #ffffff;
+            --sl-color-text: #1e1e1e;
+            --sl-color-text-muted: #6b7280;
+            --sl-color-accent: #4fb3f6;
+            --sl-color-accent-low: #187bcd;
+            --sl-color-border: #e5e7eb;
+            --sl-color-gray-1: #fafafa;
+            --sl-color-gray-5: #6b7280;
         }
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+
+        :root[data-theme='dark'] {
+            --sl-color-bg: #1e1e1e;
+            --sl-color-text: #ffffff;
+            --sl-color-text-muted: #9ca3af;
+            --sl-color-accent: #4fb3f6;
+            --sl-color-accent-low: #187bcd;
+            --sl-color-border: #404040;
+            --sl-color-gray-1: #2a2a2a;
+            --sl-color-gray-5: #9ca3af;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--sl-color-bg);
+            color: var(--sl-color-text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            padding: 1rem;
+            max-width: 36rem;
+            text-align: center;
         }
-        to {
-          opacity: 1;
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            animation: fadeInDown 0.8s ease-out;
         }
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 0.1;
-          transform: scale(1);
+
+        .logo-wrapper {
+            position: relative;
+            width: 8rem;
+            height: 8rem;
         }
-        50% {
-          opacity: 0.2;
-          transform: scale(1.05);
+
+        .logo-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--sl-color-accent) 0%, var(--sl-color-accent-low) 100%);
+            border-radius: 1.5rem;
+            opacity: 0.1;
+            animation: pulseGlow 2s ease-in-out infinite;
         }
-      }
-      @keyframes progress {
-        0% {
-          transform: translateX(-100%);
+
+        .logo-icon {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        100% {
-          transform: translateX(400%);
+
+        .logo-icon img {
+            width: 4rem;
+            height: 4rem;
+            filter: drop-shadow(0 4px 12px rgba(79, 179, 246, 0.3));
         }
-      }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .brand h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--sl-color-text);
+            letter-spacing: -0.02em;
+        }
+
+        .brand p {
+            font-size: 1rem;
+            color: var(--sl-color-text-muted);
+            font-weight: 500;
+        }
+
+        .loading-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .spinner-wrapper {
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+        }
+
+        .spinner-glow {
+            position: absolute;
+            inset: -0.5rem;
+            border: 4px solid transparent;
+            border-top-color: var(--sl-color-accent);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: spin 1s linear infinite reverse;
+            filter: blur(8px);
+        }
+
+        .spinner {
+            position: absolute;
+            inset: 0;
+            border: 4px solid var(--sl-color-border);
+            border-top-color: var(--sl-color-accent);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .loading-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .loading-text h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--sl-color-text);
+        }
+
+        .loading-text p {
+            font-size: 1rem;
+            color: var(--sl-color-text-muted);
+        }
+
+        .progress-bar {
+            width: 100%;
+            max-width: 20rem;
+            height: 4px;
+            background: var(--sl-color-border);
+            border-radius: 2px;
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sl-color-accent) 0%, var(--sl-color-accent-low) 100%);
+            border-radius: 2px;
+            animation: progress 1.5s ease-in-out infinite;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            color: var(--sl-color-text-muted);
+            animation: fadeIn 1s ease-out 0.6s both;
+        }
+
+        .footer-text a {
+            color: var(--sl-color-accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .footer-text a:hover {
+            color: var(--sl-color-accent-low);
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                opacity: 0.1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.2;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes progress {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(400%); }
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                gap: 2rem;
+            }
+
+            .logo-wrapper {
+                width: 6.5rem;
+                height: 6.5rem;
+            }
+
+            .logo-icon img {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            .brand h1 {
+                font-size: 1.75rem;
+            }
+
+            .loading-text h2 {
+                font-size: 1.25rem;
+            }
+
+            .progress-bar {
+                max-width: 16rem;
+            }
+        }
     </style>
-  </body>
+</head>
+<body>
+    <main class="container">
+        <div class="logo-section">
+            <div class="logo-wrapper">
+                <div class="logo-bg"></div>
+                <div class="logo-icon">
+                    <img src="/logosinfondo.svg" alt="ZenForge Studio" />
+                </div>
+            </div>
+            <div class="brand">
+                <h1>ZenForge Studio</h1>
+                <p>Tecnología · Diseño · Innovación</p>
+            </div>
+        </div>
+
+        <div class="loading-section">
+            <div class="spinner-wrapper">
+                <div class="spinner-glow"></div>
+                <div class="spinner"></div>
+            </div>
+            <div class="loading-text">
+                <h2>Preparando tu experiencia</h2>
+                <p>Un momento, por favor...</p>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+
+        <p class="footer-text">
+            Si no eres redirigido automáticamente, <a href="/es/">haz clic aquí</a>
+        </p>
+    </main>
+</body>
 </html>

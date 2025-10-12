@@ -3,15 +3,18 @@ title: Credits / Zenforge Team
 description: Meet the team behind Zenforge Studio
 ---
 
-# Credits / Zenforge Team
-
 Zenforge Studio is possible thanks to the effort of a dedicated team and an incredible community that drives us to keep innovating.
 
-## Core Team
+## Team
 
 ### Founder and Lead Developer
 
 **Cuac_xdPE** - Founder & Lead Developer  
+Principal architect of Zenforge Studio, specialized in Minecraft plugin development, performance optimization, and modern web development.
+
+### Founder and Lead Developer
+
+**Jossxph** - Founder & Lead Developer  
 Principal architect of Zenforge Studio, specialized in Minecraft plugin development, performance optimization, and modern web development.
 
 ## Our Services

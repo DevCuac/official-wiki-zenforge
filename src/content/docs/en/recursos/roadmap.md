@@ -3,8 +3,6 @@ title: Roadmap
 description: Plans and upcoming projects for Zenforge Studio
 ---
 
-# Roadmap
-
 Learn about our plans and upcoming projects for Zenforge Studio.
 
 ## 2025 - Q1 ✅
@@ -45,29 +43,6 @@ Planned for third quarter:
 - [ ] **Quest System**: Customizable quest system
 - [ ] **Events Plugin**: Event manager for servers
 
-### Expansion
-- [ ] Portuguese translations for all plugins
-- [ ] Video tutorials on YouTube
-- [ ] Collaborations with other developers
-
-### Infrastructure
-- [ ] Public API for developers
-- [ ] Improved licensing system
-- [ ] Developer documentation
-
-## 2025 - Q4 🔮
-
-Exploring for fourth quarter:
-
-### Innovation
-- [ ] **Zenforge Framework**: Framework for rapid plugin development
-- [ ] **Builder Tools**: Tools for builds and world edit
-- [ ] AI API integration for intelligent features
-
-### Community
-- [ ] Affiliate program for creators
-- [ ] Community plugin contest
-- [ ] Beta testing program for community
 
 ## 2026 and Beyond 🚀
 
@@ -83,17 +58,13 @@ Long-term vision:
 - Advanced configuration tutorials
 - Zenforge certification for developers
 
-### Global Expansion
-- Complete multilanguage support (10+ languages)
-- International team
-- Events and meetups
 
 ## How to Contribute
 
 Have ideas for the roadmap?
 
 ### For Users
-1. Join our [Discord](https://discord.gg/zenforge)
+1. Join our [Discord](https://discord.gg/3UsDs72qMd)
 2. Share your suggestions in the ideas channel
 3. Vote for the features that interest you most
 

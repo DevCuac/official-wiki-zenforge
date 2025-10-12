@@ -3,8 +3,6 @@ title: Qué es Zenforge Studio
 description: Descubre el equipo y los servicios detrás de Zenforge Studio
 ---
 
-# Qué es Zenforge Studio
-
 **Zenforge Studio** es un equipo apasionado de desarrolladores, builders, diseñadores y creativos dedicado a forjar productos de alta calidad para la comunidad de Minecraft y desarrollo web. Nacimos de la creencia de que las herramientas que brindamos no solo deben ser potentes, sino también elegantes, intuitivas y optimizadas.
 
 ## Nuestros Servicios

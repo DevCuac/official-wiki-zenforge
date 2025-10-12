@@ -3,8 +3,6 @@ title: Roadmap
 description: Planes y próximos proyectos de Zenforge Studio
 ---
 
-# Roadmap
-
 Conoce nuestros planes y próximos proyectos para Zenforge Studio.
 
 ## 2025 - Q1 ✅
@@ -50,24 +48,6 @@ Planificado para el tercer trimestre:
 - [ ] Video tutoriales en YouTube
 - [ ] Colaboraciones con otros desarrolladores
 
-### Infraestructura
-- [ ] API pública para developers
-- [ ] Sistema de licencias mejorado
-- [ ] Documentación para developers
-
-## 2025 - Q4 🔮
-
-Explorando para el cuarto trimestre:
-
-### Innovación
-- [ ] **Zenforge Framework**: Framework para desarrollo rápido de plugins
-- [ ] **Builder Tools**: Herramientas para builds y world edit
-- [ ] Integración con APIs de IA para features inteligentes
-
-### Comunidad
-- [ ] Programa de afiliados para creators
-- [ ] Concurso de plugins comunitarios
-- [ ] Beta testing program para la comunidad
 
 ## 2026 y más allá 🚀
 
@@ -83,17 +63,12 @@ Visión a largo plazo:
 - Tutoriales avanzados de configuración
 - Certificación Zenforge para developers
 
-### Expansión Global
-- Soporte multiidioma completo (10+ idiomas)
-- Equipo internacional
-- Eventos y meetups
-
 ## Cómo Contribuir
 
 ¿Tienes ideas para el roadmap?
 
 ### Para Usuarios
-1. Únete a nuestro [Discord](https://discord.gg/zenforge)
+1. Únete a nuestro [Discord](https://discord.gg/3UsDs72qMd)
 2. Comparte tus sugerencias en el canal de ideas
 3. Vota por las features que más te interesen
 

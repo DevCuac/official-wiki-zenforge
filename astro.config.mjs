@@ -14,8 +14,9 @@ export default defineConfig({
         en: 'Zenforge Wiki',
       },
       description: 'Documentación oficial de Zenforge Studio',
+      favicon: '/logo.svg',
       logo: {
-        src: './public/logo.svg',
+        src: '/public/logo.svg',
       },
       customCss: [
         './src/styles/global.css',
@@ -24,17 +25,17 @@ export default defineConfig({
         {
           label: 'GitHub',
           icon: 'github',
-          href: 'https://github.com/zenforge-studio',
+          href: 'https://github.com/ZenForge-Studios',
         },
         {
           label: 'Discord',
           icon: 'discord',
-          href: 'https://discord.gg/zenforge',
+          href: 'https://discord.gg/3UsDs72qMd',
         },
       ],
-      defaultLocale: 'root',
+      defaultLocale: 'es',
       locales: {
-        root: {
+        es: {
           label: 'Español',
           lang: 'es',
         },
@@ -44,7 +45,7 @@ export default defineConfig({
         },
       },
       editLink: {
-        baseUrl: 'https://github.com/zenforge-studio/zenforge-wiki/edit/main/',
+        baseUrl: 'https://github.com/ZenForge-Studios/official-wiki-zenforge',
       },
       lastUpdated: true,
       sidebar: [
@@ -66,6 +67,13 @@ export default defineConfig({
         {
           label: 'Plugins',
           items: [
+            { 
+              label: 'Empezando',
+              translations: {
+                en: 'Getting Started',
+              },
+              link: '/plugins/inicio/',
+            },
             {
               label: 'ZenRewards',
               collapsed: true,
