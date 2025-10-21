@@ -1,56 +1,72 @@
 ---
-title: "Acciones de Ítem"
-description: "Aprende a usar acciones especiales como [CLOSE] y [PLAYER] para añadir interactividad a tus menús."
+title: "Item Actions"
+description: "Make your menus interactive with custom actions like [CLOSE], [PLAYER], and [CONSOLE]."
 ---
 
-Además de las recompensas, puedes crear ítems en tus menús que ejecuten acciones especiales al ser clickeados. Estas acciones se definen en la lista `commands` de cualquier ítem decorativo en `menu.yml` o `streak-menu.yml`.
+ZenRewards allows you to **assign special actions to your menu items**, giving you the ability to run commands or close inventories with a single click.  
+These actions are defined inside the `commands:` list of any decorative or interactive item in `menu.yml` or `streak-menu.yml`.
 
-## Acciones Disponibles
+---
 
-| Acción | Descripción |
-| :--- | :--- |
-| `[CLOSE]` | Cierra el inventario actual. |
-| `[PLAYER] <comando>` | Ejecuta un comando como si lo escribiera el jugador. Respeta sus permisos. |
-| `[CONSOLE] <comando>` | Ejecuta un comando desde la consola. Usa `%player%` para referirte al jugador. |
+## ⚙️ Available Actions
 
-## Ejemplos de Uso
+| Action | Usage | Description |
+| :--- | :--- | :--- |
+| `[CLOSE]` | `[CLOSE]` | Closes the player's current inventory. Ideal for exit buttons. |
+| `[PLAYER] <command>` | `[PLAYER] spawn` | Executes a command as if the player typed it. Respects their permissions. |
+| `[CONSOLE] <command>` | `[CONSOLE] eco give %player% 100` | Executes a command from the console. Use `%player%` to reference the player. |
 
-A continuación, se muestra cómo usar estas acciones para crear ítems interactivos en `menu.yml`.
+> 💡 **Tip:** You can combine multiple actions in the same item.  
+> The order in the list determines the execution order.
 
-> **Ejemplo:** Aquí creamos dos ítems: uno para cerrar el menú y otro que da 50 monedas al jugador y le hace enviar un mensaje al chat.
+---
+
+## 🧩 Example Usage in `menu.yml`
+
+Below are practical examples showing how to apply these actions to menu items:
 
 ```yaml
 items:
-  # Botón para cerrar el menú
+  # 🔴 Button to close the menu
   close_button:
     slot: 49
     material: BARRIER
-    name: "&c&lCerrar"
+    name: "&c&lClose"
     lore:
-      - "&7Haz clic para salir."
+      - "&7Click to exit."
     commands:
       - "[CLOSE]"
 
-  # Ítem que da una pequeña bonificación
+  # 💰 Item that grants a small bonus
   bonus_item:
     slot: 40
     material: SUNFLOWER
-    name: "&e¡Bonus!"
+    name: "&eBonus!"
     lore:
-      - "&7¡Haz clic para recibir 50 monedas!"
+      - "&7Click to receive 50 coins."
     commands:
       - "[CONSOLE] eco give %player% 50"
-      - "[PLAYER] me ¡He recibido un bonus!"
+      - "[PLAYER] me I've received a bonus!"
 
-  # Ítem que envía al jugador al spawn
+  # 🧭 Item that sends the player to spawn
   go_spawn:
     slot: 4
     material: COMPASS
-    name: "&aIr al Spawn"
+    name: "&aGo to Spawn"
     lore:
-      - "&7Vuelve al punto de inicio."
+      - "&7Return to the starting point."
     commands:
       - "[PLAYER] spawn"
       - "[CLOSE]"
-```
+````
+
+---
+
+## 💡 Additional Notes
+
+* You can use **placeholders** in commands (`%player%`, `%prefix%`, etc.).
+* Actions **do not require additional permissions**, unless the player's command itself does.
+* It's possible to combine **player + console + close** actions in a single item.
+* Perfect for creating navigation buttons, confirmations, or quick-access shortcuts in your menus.
+
 ---

@@ -1,128 +1,133 @@
 ---
 title: "Introduction to ZenRewards"
-description: "¡Bienvenido a ZenRewards! Descubre cómo este plugin puede transformar la lealtad de tus jugadores y potenciar la actividad en tu servidor."
+description: "Welcome to ZenRewards! Discover how this plugin can boost player loyalty and engagement on your server."
 ---
-import Callout from '~/components/Callout.astro';
+
 import { Aside, Card, CardGrid, LinkCard, Steps, FileTree } from '@astrojs/starlight/components';
 
-¡Bienvenidos a la wiki oficial de **ZenRewards**! Este plugin ha sido diseñado para transformar la conexión diaria de tus jugadores en una emocionante rutina llena de premios. Prepárate para una experiencia donde la lealtad y la constancia se recompensan, creando una comunidad más activa y comprometida.
+Welcome to the official **ZenRewards** wiki!  
+This plugin is designed to turn your players’ daily logins into an exciting reward-filled routine. Get ready for an experience where loyalty and consistency are rewarded — building a more active and engaged community.
 
-## Primeros Pasos
+## Getting Started
 
-Navega a las secciones clave para empezar a configurar tu servidor.
+Navigate through the key sections to start setting up your server.
 
 <CardGrid>
-  <LinkCard title="Instalación" href="02-install" description="Aprende a instalar ZenRewards en tu servidor" />
-  <LinkCard title="Comandos" href="05-commands" description="Todos los comandos disponibles" />
-  <LinkCard title="Menu" href="04-menu" description="Personaliza el menú de recompensas" />
-  <LinkCard title="Placeholders" href="07-placeholders" description="Variables dinámicas con PlaceholderAPI" />
+  <LinkCard title="Installation" href="02-install" description="Learn how to install ZenRewards on your server" />
+  <LinkCard title="Commands" href="05-commands" description="All available commands" />
+  <LinkCard title="Menu" href="04-menu" description="Customize the rewards menu" />
+  <LinkCard title="Placeholders" href="07-placeholders" description="Dynamic variables with PlaceholderAPI" />
 </CardGrid>
 
-## Características Principales
+## Main Features
 
 <CardGrid>
-  <Card title="Sistema de Recompensas" icon="gift">
-    Menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango.
+  <Card title="Reward System" icon="gift">
+    A fully customizable menu where players can claim daily, weekly, unique, or rank-based rewards.
   </Card>
   
-  <Card title="Sistema de Rachas" icon="star">
-    Premia a los jugadores por su constancia al conectarse días seguidos. Crea hábitos y fideliza tu comunidad.
+  <Card title="Streak System" icon="star">
+    Reward players for their consistency by logging in on consecutive days. Build habits and strengthen your community.
   </Card>
   
   <Card title="PlaceholderAPI" icon="puzzle">
-    Integración completa con variables dinámicas para mostrar información en cualquier parte de tu servidor.
+    Full integration with dynamic variables to display information anywhere on your server.
   </Card>
   
-  <Card title="Multi-versión" icon="rocket">
-    Compatible desde 1.8.8 hasta 1.21.x y futuras versiones gracias a XSeries.
+  <Card title="Multi-Version" icon="rocket">
+    Compatible from 1.8.8 up to 1.21.x and future versions thanks to XSeries.
   </Card>
 </CardGrid>
 
-## Guía de Inicio Rápido
+## Quick Start Guide
 
-Sigue estos simples pasos para tener ZenRewards funcionando en minutos.
+Follow these simple steps to have ZenRewards running in minutes.
 
 <Steps>
 
-1. **Descargar el Plugin**
+1. **Download the Plugin**
    
-   Obtén la última versión del archivo `.jar` desde nuestra página de lanzamiento oficial.
+   Get the latest `.jar` file from our official release page.
 
-2. **Instalar en tu Servidor**
+2. **Install on Your Server**
    
-   Coloca el archivo `ZenRewards.jar` en la carpeta `plugins` de tu servidor.
+   Place the `ZenRewards.jar` file inside your server’s `plugins` folder.
 
-   :::tip[¡Activa los Placeholders!]
-   Si tienes **PlaceholderAPI** instalado (¡muy recomendado!), las variables como `%zenrewards_streak_current%` se activarán automáticamente.
+   :::tip[Enable Placeholders!]
+   If you have **PlaceholderAPI** installed (highly recommended!), variables like `%zenrewards_streak_current%` will activate automatically.
    :::
 
-3. **Reiniciar y Configurar**
+3. **Restart and Configure**
    
-   Reinicia tu servidor por completo. Se generará la carpeta `ZenRewards` con todos los archivos de configuración listos para que los personalices a tu gusto.
+   Fully restart your server. The `ZenRewards` folder will be generated with all configuration files ready to customize.
 
 </Steps>
 
-## Conceptos Clave del Plugin
+## Core Concepts
 
-ZenRewards se basa en dos sistemas principales que trabajan juntos para fomentar la retención de jugadores.
+ZenRewards is built around two main systems that work together to improve player retention.
 
-### Menú de Recompensas (`/rewards`)
+### Rewards Menu (`/rewards`)
 
-El corazón del plugin. Un menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango. Los ítems son inteligentes y cambian su apariencia según su estado (disponible, en cooldown, etc.).
+The heart of the plugin. A fully customizable menu where players can claim daily, weekly, unique, or rank-based rewards. Items are dynamic and change appearance based on their state (available, on cooldown, etc.).
 
-### Sistema de Rachas (`/streak`)
+### Streak System (`/streak`)
 
-La joya de la corona. Premia a los jugadores por su constancia al conectarse días seguidos. Este sistema es clave para crear un hábito de conexión y construir una comunidad leal.
+The crown jewel. Rewards players for logging in consecutively. This system is key to creating login habits and fostering a loyal community.
 
-## Estructura de Archivos Generada
+## Generated File Structure
 
-Al iniciarse por primera vez, ZenRewards creará la siguiente estructura de carpetas y archivos.
+When launched for the first time, ZenRewards creates the following folder and file structure.
 
 <FileTree>
 
 - ZenRewards/
   - playerdata/
-    - uuid-del-jugador.yml
-  - **config.yml** Configuración principal
-  - menu.yml Configuración del menú de recompensas
-  - rewards.yml Definición de todas las recompensas
-  - streak-menu.yml Configuración del menú de rachas
-  - streaks.yml Configuración del sistema de rachas
+    - player-uuid.yml
+  - **config.yml** Main configuration
+  - menu.yml Rewards menu configuration
+  - rewards.yml Definition of all rewards
+  - streak-menu.yml Streak menu configuration
+  - streaks.yml Streak system configuration
 
 </FileTree>
 
-## Placeholders Destacados
+## Highlighted Placeholders
 
-Gracias a la integración con PlaceholderAPI, puedes mostrar información dinámica en cualquier parte de tu servidor.
+Thanks to PlaceholderAPI integration, you can display dynamic information anywhere on your server.
 
-| Placeholder | Descripción | Tags |
+| Placeholder | Description | Tags |
 |-------------|-------------|------|
-| `%zenrewards_streak_current%` | Muestra el número de días de racha de conexión actual del jugador | PAPI, Racha |
-| `%zenrewards_cooldown_daily_reward%` | Muestra el tiempo restante para la recompensa con ID 'daily_reward'. Si está disponible, muestra "Ready" | PAPI, Cooldown |
-| `%zenrewards_total_claimed%` | Total de recompensas reclamadas por el jugador | PAPI, Estadísticas |
+| `%zenrewards_streak_current%` | Shows the player’s current login streak in days. | PAPI, Streak |
+| `%zenrewards_cooldown_daily_reward%` | Shows the remaining cooldown for the reward with ID 'daily_reward'. Displays "Ready" when available. | PAPI, Cooldown |
+| `%zenrewards_total_claimed%` | Total number of rewards claimed by the player. | PAPI, Statistics |
 
-:::note[Placeholder Personalizable]
-Puedes cambiar el ID `daily_reward` por el ID de cualquier recompensa configurada en `rewards.yml`.
+:::note[Customizable Placeholder]
+You can replace the `daily_reward` ID with the ID of any configured reward in `rewards.yml`.
 :::
 
-## Preguntas Frecuentes
+## Frequently Asked Questions
 
-### ¿Este plugin funciona en mi versión de Minecraft?
+### Does this plugin work with my Minecraft version?
 
-¡Sí! ZenRewards está construido para ser retrocompatible. Funciona desde la versión **1.8.8 hasta la 1.21.x** y futuras. Utilizamos la librería XSeries para manejar las diferencias de materiales y sonidos entre versiones de forma automática.
+Yes! ZenRewards is built for backwards compatibility. It works from **1.8.8 up to 1.21.x** and beyond.  
+We use the XSeries library to automatically handle material and sound differences between versions.
 
-### ¿Afecta al rendimiento del servidor (TPS)?
+### Does it affect server performance (TPS)?
 
-No. Las operaciones clave, como la actualización de los menús y el manejo de datos, están optimizadas. El sistema de actualización de cooldowns en tiempo real solo se activa para los jugadores que tienen el menú abierto, evitando cualquier carga innecesaria.
+No. Core operations such as menu updates and data handling are optimized.  
+The real-time cooldown update system only activates for players who have the menu open, preventing unnecessary load.
 
-### ¿Puedo personalizar los premios?
+### Can I customize the rewards?
 
-Absolutamente. Todos los premios, cooldowns, mensajes y apariencias están definidos en archivos YAML fáciles de editar. Consulta la sección de [Configuración](03-config) para más detalles.
+Absolutely. All rewards, cooldowns, messages, and appearances are defined in easy-to-edit YAML files.  
+Check out the [Configuration](03-config) section for more details.
 
-### ¿Soporta múltiples idiomas?
+### Does it support multiple languages?
 
-Sí. Todos los mensajes son configurables en `config.yml` y puedes traducirlos al idioma que prefieras. Además, soporta colores y formato usando códigos de Minecraft estándar.
+Yes. All messages are configurable in `config.yml`, and you can translate them to any language you prefer.  
+It also supports color and formatting using standard Minecraft codes.
 
-:::tip[¿Necesitas ayuda?]
-Únete a nuestro [Discord](https://discord.gg/zenforge) para soporte directo y comparte tus configuraciones con la comunidad.
+:::tip[Need Help?]
+Join our [Discord](https://discord.gg/zenforge) for direct support and to share your configurations with the community.
 :::

@@ -1,28 +1,87 @@
 ---
-title: "Instalación"
-description: "Sigue estos sencillos pasos para instalar ZenRewards en tu servidor y empezar a configurar tus recompensas."
+title: "Installation"
+description: "Step-by-step guide to correctly install ZenRewards on your Minecraft server."
 ---
 
-## Requisitos
+## 🧱 Prerequisites
 
--   **Tipo de Servidor:** Spigot, Paper, Purpur o cualquier fork compatible.
--   **Versión de Minecraft:** 1.8.8 o superior.
--   **Dependencia Opcional:** [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/)
+Before starting, make sure you meet the following requirements:
 
-## Guía de Instalación
+| Requirement | Details |
+| :--- | :--- |
+| **Server Type** | Spigot, Paper, Purpur, or any compatible fork. |
+| **Minecraft Version** | 1.8.8 or higher. |
+| **Optional Dependency** | [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) (to use custom placeholders). |
 
-1.  **Descargar el Plugin**
-    Obtén la última versión del archivo `ZenRewards.jar` desde nuestra página de lanzamiento oficial.
+> 💡 **Recommendation:** Although PlaceholderAPI is optional, installing it allows you to make full use of ZenRewards’ dynamic variables.
 
-2.  **Subir al Servidor**
-    Coloca el archivo `ZenRewards.jar` descargado dentro de la carpeta `plugins` de tu servidor.
+---
 
-3.  **Instalar Dependencias (Opcional)**
-    Si deseas utilizar los placeholders (ej. `%zenrewards_streak_current%`), asegúrate de tener el plugin **PlaceholderAPI** instalado. ZenRewards se integrará con él automáticamente.
+## ⚙️ Installation Guide
 
-    > **Nota:** Recomendamos encarecidamente usar PlaceholderAPI para sacar el máximo provecho de ZenRewards.
+Follow these steps carefully for a proper installation:
 
-4.  **Reiniciar el Servidor**
-    Reinicia tu servidor por completo. **No uses `/reload`**, ya que puede causar problemas.
+### **1️⃣ Download the Plugin**
 
-¡Y eso es todo! Al reiniciar, se generará la carpeta `ZenRewards` con todos los archivos de configuración listos para ser personalizados.
+- Get the latest version of **`ZenRewards.jar`** from our official pages:  
+  - [BuiltByBit](https://builtbybit.com/resources/zenrewards.77368)
+  - [Modrinth](https://modrinth.com/project/zenrewards)
+
+Always download from official sources to avoid modified or unsafe files.
+
+---
+
+### **2️⃣ Upload the Plugin to the Server**
+
+- Move the `ZenRewards.jar` file into your:
+```
+
+/plugins
+
+```
+- Make sure the file is complete and not corrupted.
+
+---
+
+### **3️⃣ Install Dependencies (Optional)**
+
+If you want to use placeholders like `%zenrewards_streak_current%` or `%zenrewards_claimable_count%`:
+
+1. Download and install **PlaceholderAPI** in the `/plugins` folder.  
+2. Restart your server so ZenRewards can detect it automatically.
+
+> ⚠️ **Important:** ZenRewards automatically detects PlaceholderAPI — **no manual configuration required.**
+
+---
+
+### **4️⃣ Restart the Server**
+
+- Fully restart your server (do not use `/reload`).
+
+> 🚫 **Avoid using `/reload`:** It may cause loading errors and temporary data loss.
+
+After restarting, ZenRewards will automatically generate the following folder:
+```
+
+/plugins/ZenRewards/
+
+```
+with these files:
+```
+
+config.yml
+menu.yml
+streak-menu.yml
+rewards.yml
+
+```
+
+---
+
+### ✅ **Installation Complete**
+
+Done! 🎉  
+Your server now has **ZenRewards** installed and ready for you to configure custom rewards.  
+Continue with the [Reward Configuration](../configuracion/recompensas) section to start creating your prizes.
+
+---

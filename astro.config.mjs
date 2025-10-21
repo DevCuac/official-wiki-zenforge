@@ -13,6 +13,9 @@ export default defineConfig({
         es: 'Zenforge Wiki',
         en: 'Zenforge Wiki',
       },
+      customCss: [
+        './src/styles/custom.css',
+      ],
       description: 'Documentación oficial de Zenforge Studio',
       favicon: '/logo.svg',
       logo: {
@@ -33,7 +36,7 @@ export default defineConfig({
           href: 'https://discord.gg/3UsDs72qMd',
         },
       ],
-      defaultLocale: 'es',
+      defaultLocale: 'en',
       locales: {
         es: {
           label: 'Español',
@@ -93,11 +96,11 @@ export default defineConfig({
                   slug: 'plugins/zenrewards/instalacion',
                 },
                 { 
-                  label: 'Comandos',
+                  label: 'Recompensas',
                   translations: {
-                    en: 'Commands',
+                    en: 'Rewards',
                   },
-                  slug: 'plugins/zenrewards/comandos',
+                  slug: 'plugins/zenrewards/recompensas',
                 },
                 { 
                   label: 'Menú',
@@ -107,18 +110,18 @@ export default defineConfig({
                   slug: 'plugins/zenrewards/menu',
                 },
                 { 
-                  label: 'Placeholders',
+                  label: 'Acciones',
                   translations: {
-                    en: 'Placeholders',
+                    en: 'Actions',
                   },
-                  slug: 'plugins/zenrewards/placeholders',
+                  slug: 'plugins/zenrewards/acciones',
                 },
                 { 
-                  label: 'Recompensas',
+                  label: 'Comandos',
                   translations: {
-                    en: 'Rewards',
+                    en: 'Commands',
                   },
-                  slug: 'plugins/zenrewards/recompensas',
+                  slug: 'plugins/zenrewards/comandos',
                 },
                 { 
                   label: 'Permisos',
@@ -128,13 +131,224 @@ export default defineConfig({
                   slug: 'plugins/zenrewards/permisos',
                 },
                 { 
-                  label: 'Acciones',
+                  label: 'Placeholders',
                   translations: {
-                    en: 'Actions',
+                    en: 'Placeholders',
                   },
-                  slug: 'plugins/zenrewards/acciones',
+                  slug: 'plugins/zenrewards/placeholders',
                 },
               ],
+            },
+            { 
+              label: 'ZenFairy',
+              collapsed: true,
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenfairy/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenPrison',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenprison/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenEssentials',
+              badge: 'Soon',
+              collapsed: true,
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenessentials/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenProfiles',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenprofiles/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenMilestone',
+              badge: 'Soon',
+              collapsed: true,
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenmilestone/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenCalendar',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zencalendar/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenHub',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenhub/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenTags',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zentags/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenEvents',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenevents/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenGifts',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zengifts/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenStorage',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenstorage/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenWardrobe',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenwardrobe/introduccion',
+                },
+              ]
+            },
+            { 
+              label: 'ZenOrbs',
+              collapsed: true,
+              badge: 'Soon',
+              items: [
+                { 
+                  label: 'Introducción',
+                  translations: {
+                    en: 'Introduction',
+                  },
+                  slug: 'plugins/zenorbs/introduccion',
+                },
+              ]
+            },
+          ],
+        },
+        {
+          label: 'Configs',
+          translations: {
+            en: 'Configs',
+          },
+          items: [
+            { 
+              label: 'Muy Pronto',
+              translations: {
+                en: 'Soon',
+              },
+              slug: 'config/soon',
+            },
+          ],
+        },
+        {
+          label: 'Setups',
+          translations: {
+            en: 'Setups',
+          },
+          items: [
+            { 
+              label: 'Muy Pronto',
+              translations: {
+                en: 'Soon',
+              },
+              slug: 'setups/soon',
             },
           ],
         },
