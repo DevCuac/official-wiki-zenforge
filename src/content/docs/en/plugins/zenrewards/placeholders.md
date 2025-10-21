@@ -1,31 +1,46 @@
 ---
 title: "Placeholders (Variables)"
-description: "Integra ZenRewards con otros plugins usando esta completa lista de placeholders de PlaceholderAPI."
+description: "Integrate ZenRewards with other plugins using this complete list of PlaceholderAPI-compatible variables."
 ---
 
-> **Requisito:** Para usar estas variables, necesitas tener [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) instalado.
+> ⚙️ **Requirement:**  
+> To use these variables, make sure you have [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installed.
 
-## Placeholders de Rachas
+---
 
--   `%zenrewards_streak_current%`
-    Muestra el número de días de racha de conexión actual del jugador.
-    *(Ejemplo de salida: `7`)*
+## 🔁 Streak Placeholders
 
-## Placeholders Generales
+> Variables related to the player’s daily login streak.
 
--   `%zenrewards_claimable_count%`
-    Muestra cuántas recompensas del menú `/rewards` tiene el jugador disponibles para reclamar.
-    *(Ejemplo de salida: `3`)*
+| Placeholder | Description | Example Output |
+|--------------|-------------|----------------|
+| ```%zenrewards_streak_current%``` | Shows the player’s current streak day count. | `7` |
 
-## Placeholders Específicos por Recompensa
+---
 
-Estos placeholders requieren que reemplaces `<id>` con la ID de la recompensa de tu `rewards.yml` (ej. `daily_reward`).
+## 🧩 General Placeholders
 
--   `%zenrewards_status_<id>%`
-    Muestra el estado traducido de una recompensa (Disponible, Enfriamiento, etc.). Los textos se configuran en `config.yml`.
-    *(Ejemplo de uso: `%zenrewards_status_vip_reward%`)*
+> General variables that display global ZenRewards information.
 
--   `%zenrewards_cooldown_<id>%`
-    Muestra el tiempo restante para una recompensa. Si está disponible, muestra el texto 'Ready' (configurable).
-    *(Ejemplo de uso: `%zenrewards_cooldown_daily_reward%`)*
+| Placeholder | Description | Example Output |
+|--------------|-------------|----------------|
+| ```%zenrewards_claimable_count%``` | Shows how many rewards the player can currently claim in the `/rewards` menu. | `3` |
+
+---
+
+## 🎯 Reward-Specific Placeholders
+
+> These variables require replacing `<id>` with the **reward ID** from your `rewards.yml` file (for example, `daily_reward` or `vip_reward`).
+
+| Placeholder | Description | Example Usage |
+|--------------|-------------|---------------|
+| ```%zenrewards_status_<id>%``` | Displays the **translated status** of a reward (Available, On Cooldown, etc.). The texts are configured in `config.yml`. | `%zenrewards_status_vip_reward%` |
+| ```%zenrewards_cooldown_<id>%``` | Displays the **remaining cooldown time** before the reward can be claimed again. If ready, it shows the *Ready* text (configurable). | `%zenrewards_cooldown_daily_reward%` |
+
+---
+
+### 💡 Note
+You can use these placeholders in any plugin or scoreboard compatible with PlaceholderAPI.  
+Example: *DeluxeMenus*, *TAB*, *Scoreboard*, *ActionBar*, *Holograms*, and more.
+
 ---

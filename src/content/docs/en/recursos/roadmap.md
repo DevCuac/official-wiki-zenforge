@@ -1,111 +1,115 @@
 ---
 title: Roadmap
-description: Plans and upcoming projects for Zenforge Studio
+description: Planes y próximos proyectos de Zenforge Studio
 ---
 
-Learn about our plans and upcoming projects for Zenforge Studio.
+Conoce nuestros planes y próximos proyectos para Zenforge Studio.
 
 ## 2025 - Q1 ✅
 
-Completed in the first quarter:
+Completado en el primer trimestre:
 
-- [x] Launch of **ZenRewards v1.0**
-- [x] Official Zenforge Studio Wiki (the one you're reading)
-- [x] Optimized Discord server with support channels
-- [x] Professional BuiltByBit profile
-- [x] Public GitHub repository
+- [x] Lanzamiento de **ZenRewards v1.0**
+- [x] Wiki oficial de Zenforge Studio (esta que estás leyendo)
+- [x] Servidor de Discord optimizado con canales de soporte
+- [x] Perfil profesional en BuiltByBit
+- [x] Repositorio público en GitHub
 
 ## 2025 - Q2 🚧
 
-In active development:
+En desarrollo activo:
 
 ### Plugins
-- [ ] **ZenRewards v1.1**: New rewards and quest system
-- [ ] **New Premium Plugin**: Advanced economy system
-- [ ] Compatibility updates for Minecraft 1.21.2+
+- [ ] **ZenRewards v1.1**: Nuevas recompensas y sistema de misiones
+- [ ] **Nuevo Plugin Premium**: Sistema de economía avanzada
+- [ ] Actualizaciones de compatibilidad para Minecraft 1.21.2+
 
-### Services
-- [ ] **Configuration Packages**: Pre-configured templates for servers
-- [ ] **Improved Ticket System**: On Discord for better support
-- [ ] **Expanded Documentation**: More tutorials and guides
+### Servicios
+- [ ] **Paquetes de configuración**: Templates pre-configurados para servidores
+- [ ] **Sistema de tickets mejorado**: En Discord para mejor soporte
+- [ ] **Documentación expandida**: Más tutoriales y guías
 
 ### Web
-- [ ] **Project Portfolio**: Showcase of completed work
-- [ ] **Quote System**: Automated form for budgets
-- [ ] Wiki SEO optimization
+- [ ] **Portfolio de proyectos**: Showcase de trabajos realizados
+- [ ] **Sistema de cotizaciones**: Formulario automatizado para presupuestos
+- [ ] Optimización SEO de la wiki
 
 ## 2025 - Q3 📋
 
-Planned for third quarter:
+Planificado para el tercer trimestre:
 
-### New Products
-- [ ] **Clans/Guilds Plugin**: Complete clan system
-- [ ] **Quest System**: Customizable quest system
-- [ ] **Events Plugin**: Event manager for servers
+### Nuevos Productos
+- [ ] **Plugin de Clanes/Guilds**: Sistema completo de clanes
+- [ ] **Sistema de Misiones**: Quest system personalizable
+- [ ] **Plugin de Eventos**: Event manager para servidores
 
-
-## 2026 and Beyond 🚀
-
-Long-term vision:
-
-### Zenforge Platform
-- Plugin and resource marketplace
-- Premium subscription system with benefits
-- Partner server network
-
-### Education
-- Complete plugin development course
-- Advanced configuration tutorials
-- Zenforge certification for developers
+### Expansión
+- [ ] Traducciones al Portugués para todos los plugins
+- [ ] Video tutoriales en YouTube
+- [ ] Colaboraciones con otros desarrolladores
 
 
-## How to Contribute
+## 2026 y más allá 🚀
 
-Have ideas for the roadmap?
+Visión a largo plazo:
 
-### For Users
-1. Join our [Discord](https://discord.gg/3UsDs72qMd)
-2. Share your suggestions in the ideas channel
-3. Vote for the features that interest you most
+### Plataforma Zenforge
+- Marketplace de plugins y recursos
+- Sistema de suscripción premium con benefits
+- Red de servidores partner
 
-### For Developers
-1. Check our repositories on [GitHub](https://github.com/ZenForge-Studios)
-2. Open Issues with bugs or suggestions
-3. Contribute with Pull Requests
+### Educación
+- Curso completo de desarrollo de plugins
+- Tutoriales avanzados de configuración
+- Certificación Zenforge para developers
 
-### For Clients
-1. Hire custom services
-2. Share feedback on projects
-3. Recommend us to other servers
+## Cómo Contribuir
 
-## Current Project Status
+¿Tienes ideas para el roadmap?
 
-| Project | Status | Release |
-|---------|--------|---------|
-| ZenRewards v1.1 | 🚧 In development | April 2025 |
-| Premium Economy | 📋 Planned | May 2025 |
-| Config Templates | 🚧 In development | March 2025 |
-| Web Portfolio | 📋 Planned | April 2025 |
-| Clan System | 💡 In research | Q3 2025 |
-| Zenforge Framework | 💡 In research | Q4 2025 |
+### Para Usuarios
+1. Únete a nuestro [Discord](https://discord.gg/3UsDs72qMd)
+2. Comparte tus sugerencias en el canal de ideas
+3. Vota por las features que más te interesen
 
-## Priorities
+### Para Developers
+1. Revisa nuestros repositorios en [GitHub](https://github.com/ZenForge-Studios)
+2. Abre Issues con bugs o sugerencias
+3. Contribuye con Pull Requests
 
-Our priorities for 2025:
+### Para Clientes
+1. Contrata servicios personalizados
+2. Comparte feedback sobre proyectos
+3. Recomiéndanos con otros servers
 
-1. **Quality over quantity**: We prefer to release fewer but better polished products
-2. **Active support**: Keep existing plugins updated
-3. **Community**: Build a solid and active community
-4. **Innovation**: Explore new technologies and unique features
+## Estado Actual de Proyectos
 
-:::note[Important notice]
-This roadmap is indicative and may change based on community needs, client feedback, and team priorities. Dates are estimated.
+| Proyecto | Estado | Lanzamiento |
+|----------|--------|-------------|
+| ZenRewards v1.1 | 🚧 En desarrollo | Abril 2025 |
+| Economía Premium | 📋 Planificado | Mayo 2025 |
+| Templates de Config | 🚧 En desarrollo | Marzo 2025 |
+| Portfolio Web | 📋 Planificado | Abril 2025 |
+| Sistema de Clanes | 💡 En investigación | Q3 2025 |
+| Zenforge Framework | 💡 En investigación | Q4 2025 |
+
+## Prioridades
+
+Nuestras prioridades para 2025:
+
+1. **Calidad sobre cantidad**: Preferimos lanzar menos productos pero mejor pulidos
+2. **Soporte activo**: Mantener actualizados los plugins existentes
+3. **Comunidad**: Construir una comunidad sólida y activa
+4. **Innovación**: Explorar nuevas tecnologías y features únicas
+
+:::note[Aviso importante]
+Este roadmap es indicativo y puede cambiar según las necesidades de la comunidad, feedback de clientes y prioridades del equipo. Las fechas son estimadas.
 :::
 
-:::tip[Stay informed]
-Follow us on Discord for real-time updates on new project development.
+:::tip[Mantente informado]
+Síguenos en Discord para actualizaciones en tiempo real sobre el desarrollo de nuevos proyectos.
 :::
 
 ---
 
-**Excited about what's coming?** Join Discord and be part of Zenforge Studio's future. 🚀
+**¿Emocionado por lo que viene?** Únete a Discord y sé parte del futuro de Zenforge Studio. 🚀

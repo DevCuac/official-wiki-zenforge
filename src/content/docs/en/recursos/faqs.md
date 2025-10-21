@@ -1,132 +1,132 @@
 ---
 title: FAQs
-description: Frequently asked questions about Zenforge Studio and our services
+description: Preguntas frecuentes sobre Zenforge Studio y nuestros servicios
 ---
 
-# Frequently Asked Questions
+# Preguntas Frecuentes
 
-Answers to the most common questions about Zenforge Studio, our services, and products.
+Respuestas a las preguntas más comunes sobre Zenforge Studio, nuestros servicios y productos.
 
-## Services and Hiring
+## Servicios y Contratación
 
-### What services does Zenforge Studio offer?
+### ¿Qué servicios ofrece Zenforge Studio?
 
-We offer custom Minecraft plugin development, server configuration and optimization, professional translations, and web development (wikis, landing pages, web systems).
+Ofrecemos desarrollo de plugins personalizados para Minecraft, configuración y optimización de servidores, traducciones profesionales, y desarrollo web (wikis, landing pages, sistemas web).
 
-### How can I hire a custom service?
+### ¿Cómo puedo contratar un servicio personalizado?
 
-Join our [Discord server](https://discord.gg/zenforge) and open a ticket. We'll respond with a quote within 24 hours.
+Únete a nuestro [servidor de Discord](https://discord.gg/zenforge) y abre un ticket. Te responderemos con un presupuesto sin compromiso en menos de 24 horas.
 
-### How much does a custom plugin cost?
+### ¿Cuánto cuesta un plugin personalizado?
 
-Price varies depending on project complexity. Simple plugins can start from $50 USD, while complex systems may cost more. Each project is quoted individually.
+El precio varía según la complejidad del proyecto. Los plugins simples pueden empezar desde $50 USD, mientras que sistemas complejos pueden costar más. Cada proyecto se cotiza individualmente.
 
-### Do you offer warranty on your work?
+### ¿Ofrecen garantía en sus trabajos?
 
-Yes. All our custom plugins include 30 days of support and bug fixes at no additional cost. Premium plugins include ongoing support.
+Sí. Todos nuestros plugins personalizados incluyen 30 días de soporte y corrección de bugs sin costo adicional. Los plugins premium incluyen soporte continuo.
 
-## Minecraft Plugins
+## Plugins de Minecraft
 
-### What Minecraft versions do you support?
+### ¿Qué versiones de Minecraft soportan?
 
-Our plugins are compatible from **1.8.8 to 1.21.x** and future versions. We use libraries like XSeries to ensure multi-version compatibility.
+Nuestros plugins son compatibles desde **1.8.8 hasta 1.21.x** y versiones futuras. Utilizamos librerías como XSeries para garantizar compatibilidad multi-versión.
 
-### Do plugins affect server performance?
+### ¿Los plugins afectan el rendimiento del servidor?
 
-No. All our plugins are optimized to have minimal impact on TPS. We perform extensive performance testing before each release.
+No. Todos nuestros plugins están optimizados para tener un impacto mínimo en el TPS. Realizamos pruebas exhaustivas de rendimiento antes de cada lanzamiento.
 
-### Can I request custom features for an existing plugin?
+### ¿Puedo solicitar características personalizadas para un plugin existente?
 
-Absolutely! Contact us on Discord with your idea. If it's a general feature, it might be added to the plugin. If it's very specific, we can develop a custom version.
+¡Absolutamente! Contáctanos en Discord con tu idea. Si es una característica general, podría añadirse al plugin. Si es muy específica, podemos desarrollar una versión personalizada.
 
-### Do you offer integration with other plugins?
+### ¿Ofrecen integración con otros plugins?
 
-Yes. Our plugins integrate with popular APIs like PlaceholderAPI, Vault, LuckPerms, WorldGuard, and more.
+Sí. Nuestros plugins se integran con las APIs más populares como PlaceholderAPI, Vault, LuckPerms, WorldGuard, y más.
 
-## Server Configuration
+## Configuración de Servidores
 
-### What's included in the server configuration service?
+### ¿Qué incluye el servicio de configuración de servidores?
 
-Includes plugin installation, permission configuration, file optimization (spigot.yml, paper.yml, etc.), plugin settings adjustment, and performance recommendations.
+Incluye instalación de plugins, configuración de permisos, optimización de archivos (spigot.yml, paper.yml, etc.), ajuste de configuraciones de plugins, y recomendaciones de rendimiento.
 
-### How long does it take to configure a server?
+### ¿Cuánto tiempo toma configurar un servidor?
 
-Depends on complexity. Basic configuration can take 2-3 hours. Complex servers with multiple plugins may take 1-2 days.
+Depende de la complejidad. Una configuración básica puede tomar 2-3 horas. Servidores complejos con múltiples plugins pueden tomar 1-2 días.
 
-### Do you offer ongoing maintenance?
+### ¿Ofrecen mantenimiento continuo?
 
-Yes, we offer monthly maintenance plans that include plugin updates, performance monitoring, and priority support.
+Sí, ofrecemos planes de mantenimiento mensual que incluyen actualizaciones de plugins, monitoreo de rendimiento y soporte prioritario.
 
-## Translations
+## Traducciones
 
-### What languages do you handle?
+### ¿Qué idiomas manejan?
 
-We offer professional translations in Spanish, English, Portuguese. For other languages, check availability with us.
+Ofrecemos traducciones profesionales en Español, Inglés, Portugués. Para otros idiomas, consultanos disponibilidad.
 
-### Do you translate complete plugins?
+### ¿Traducen plugins completos?
 
-Yes. We translate configuration files, plugin messages, documentation, and wikis.
+Sí. Traducimos archivos de configuración, mensajes de plugins, documentación y wikis.
 
-### How much does it cost to translate a plugin?
+### ¿Cuánto cuesta traducir un plugin?
 
-Price depends on text volume. Generally we charge per word or per complete file. Contact us for an exact quote.
+El precio depende del volumen de texto. Generalmente cobramos por palabra o por archivo completo. Contáctanos para un presupuesto exacto.
 
-## Web Development
+## Desarrollo Web
 
-### Do you create wikis like this one?
+### ¿Crean wikis como esta?
 
-Yes. This wiki is built with Astro + Starlight, and we offer the same service for other projects. Includes custom design, multi-language, and hosting.
+Sí. Esta wiki está construida con Astro + Starlight, y ofrecemos el mismo servicio para otros proyectos. Incluye diseño personalizado, multi-idioma y hosting.
 
-### How much does a custom wiki cost?
+### ¿Cuánto cuesta una wiki personalizada?
 
-A basic wiki starts from $200 USD. Complex wikis with fully custom design may cost more. Includes design, development, and deployment.
+Una wiki básica empieza desde $200 USD. Wikis complejas con diseño totalmente personalizado pueden costar más. Incluye diseño, desarrollo y deployment.
 
-### Do you offer hosting?
+### ¿Ofrecen hosting?
 
-We can recommend hosting services (Vercel, Netlify, Cloudflare Pages) and help you with deployment. Hosting itself depends on the provider you choose.
+Podemos recomendar servicios de hosting (Vercel, Netlify, Cloudflare Pages) y ayudarte con el deployment. El hosting en sí depende del proveedor que elijas.
 
-## Support and Updates
+## Soporte y Actualizaciones
 
-### Where do I get support?
+### ¿Dónde obtengo soporte?
 
-All support is provided through our [Discord server](https://discord.gg/zenforge). We have dedicated channels for each product.
+Todo el soporte se brinda a través de nuestro [servidor de Discord](https://discord.gg/zenforge). Tenemos canales dedicados para cada producto.
 
-### How often do you update your plugins?
+### ¿Con qué frecuencia actualizan sus plugins?
 
-Premium plugins receive regular updates for new Minecraft versions and bug fixes. We announce all updates on Discord.
+Los plugins premium reciben actualizaciones regulares para nuevas versiones de Minecraft y corrección de bugs. Anunciamos todas las actualizaciones en Discord.
 
-### What do I do if I find a bug?
+### ¿Qué hago si encuentro un bug?
 
-Report it on our Discord with as much information as possible (server version, plugin version, error logs). We'll investigate immediately.
+Repórtalo en nuestro Discord con la mayor información posible (versión del servidor, versión del plugin, logs de error). Lo investigaremos inmediatamente.
 
-## Payments and Licenses
+## Pagos y Licencias
 
-### What payment methods do you accept?
+### ¿Qué métodos de pago aceptan?
 
-We accept PayPal and bank transfers. For large projects, we can arrange installment payments.
+Aceptamos PayPal y transferencias bancarias. Para proyectos grandes, podemos acordar pagos en cuotas.
 
-### Do plugins have licenses?
+### ¿Los plugins tienen licencia?
 
-Custom plugins are for exclusive use of the client. Premium BuiltByBit plugins have per-domain/IP licenses according to platform policies.
+Los plugins personalizados son de uso exclusivo del cliente. Los plugins premium de BuiltByBit tienen licencia por dominio/IP según las políticas de la plataforma.
 
-### Can I resell a custom plugin?
+### ¿Puedo revender un plugin personalizado?
 
-No. Custom plugins are for exclusive use of the client who commissioned them. If you want to commercialize a plugin, contact us to discuss options.
+No. Los plugins personalizados son para uso exclusivo del cliente que los contrató. Si deseas comercializar un plugin, contáctanos para discutir opciones.
 
-## Open Source
+## Código Abierto
 
-### Does Zenforge have open source projects?
+### ¿Zenforge tiene proyectos open source?
 
-Yes. Some of our projects are available on [GitHub](https://github.com/ZenForge-Studios) under MIT license.
+Sí. Algunos de nuestros proyectos están disponibles en [GitHub](https://github.com/ZenForge-Studios) bajo licencia MIT.
 
-### Can I contribute to your projects?
+### ¿Puedo contribuir a sus proyectos?
 
-Of course! Check our repositories on GitHub and open Pull Requests with your improvements.
+¡Por supuesto! Revisa nuestros repositorios en GitHub y abre Pull Requests con tus mejoras.
 
-:::tip[Didn't find your answer?]
-Join our [Discord](https://discord.gg/zenforge) and ask the community. We answer all queries.
+:::tip[¿No encontraste tu respuesta?]
+Únete a nuestro [Discord](https://discord.gg/zenforge) y pregunta a la comunidad. Respondemos todas las consultas.
 :::
 
 ---
 
-**Ready to work with us?** Contact us on Discord and tell us about your project. 🚀
+**¿Listo para trabajar con nosotros?** Contáctanos en Discord y cuéntanos tu proyecto. 🚀

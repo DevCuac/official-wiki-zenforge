@@ -1,37 +1,46 @@
 ---
-title: "Configuración de Recompensas"
-description: "Aprende a crear y configurar todas las recompensas en el archivo rewards.yml."
+title: "Reward Configuration"
+description: "Learn how to define unique, repeatable, and fully customizable rewards within the rewards.yml file."
 ---
 
-El archivo `rewards.yml` es donde defines la lógica de cada premio: su tipo, su cooldown, los permisos necesarios y qué comandos ejecutará al ser reclamado.
+The `rewards.yml` file controls all the **logic behind your rewards** — their type, cooldown time, required permissions, and the actions executed when claimed.  
+Each reward is fully customizable and can be adapted to different progression systems or VIP ranks.
 
-## Parámetros de una Recompensa
+---
 
-Cada recompensa se define bajo una **ID única** (ej. `daily_reward`). Estos son los parámetros que puedes configurar:
+## ⚙️ General Structure
 
--   `type` **(Obligatorio)**
-    Define si la recompensa es `REPEATABLE` (se puede reclamar múltiples veces) o `UNIQUE` (solo una vez).
+Each reward is defined with a **unique ID**, which will be used to reference it in other files such as `menu.yml` or `streak-menu.yml`.
 
--   `cooldown` **(Obligatorio)**
-    Establece el tiempo de enfriamiento para las recompensas `REPEATABLE`. El formato es un número seguido de una letra: `s` (segundos), `m` (minutos), `h` (horas), `d` (días). Para recompensas `UNIQUE`, este campo debe existir pero puedes poner `0s`.
+> 🧩 **Example IDs:** `daily_reward`, `vip_reward`, `welcome_reward`
 
--   `permission` (Opcional)
-    La permission node que el jugador necesita para poder reclamar esta recompensa. Si se omite, cualquiera puede reclamarla.
+---
 
--   `commands` **(Obligatorio)**
-    Una lista de comandos que se ejecutarán desde la consola. Usa el placeholder `%player%` para referirte al jugador.
+## 📘 Available Parameters
 
--   `messages` (Opcional)
-    Una lista de mensajes que se enviarán al jugador al reclamar. Usa `%player%` y `%prefix%`.
+| Parameter | Required | Description |
+| :--- | :---: | :--- |
+| `type` | ✅ | Defines whether the reward is `REPEATABLE` (can be claimed multiple times) or `UNIQUE` (only once). |
+| `cooldown` | ✅ | Waiting time before the reward can be claimed again. Format: `10s`, `5m`, `1h`, `1d`. For unique rewards, use `0s`. |
+| `permission` | ❌ | Permission required to claim the reward. If omitted, anyone can claim it. |
+| `commands` | ✅ | List of console commands executed when the reward is claimed. Use `%player%` as a placeholder. |
+| `messages` | ❌ | Messages sent to the player upon claiming. Supports `%player%` and `%prefix%`. |
 
-## Ejemplo Completo de `rewards.yml`
+> 💡 **Tip:**  
+> Use custom permissions to create exclusive rewards based on rank, level, or special conditions.
 
-> **Ejemplo:** A continuación se muestra cómo usar todos los parámetros para crear diferentes tipos de recompensas.
+---
+
+## 🧾 Complete Example of `rewards.yml`
+
+Below is an example with three different reward types showing all possible parameters:
 
 ```yaml
-# Definición de las recompensas disponibles
+# ===============================
+# 🏆 Reward Definitions
+# ===============================
 rewards:
-  # Recompensa diaria repetible
+  # 🌅 Repeatable Daily Reward
   daily_reward:
     type: REPEATABLE
     cooldown: "1d"
@@ -39,17 +48,19 @@ rewards:
     commands:
       - "eco give %player% 100"
     messages:
-      - "%prefix%&aHas recibido tu recompensa diaria."
+      - "%prefix%&aYou have received your daily reward."
 
-  # Recompensa única de bienvenida
+  # 🎁 Unique Welcome Reward
   welcome_reward:
     type: UNIQUE
     cooldown: "0s"
     permission: "zenrewards.claim.welcome"
     commands:
       - "kit starter %player%"
-  
-  # Recompensa mensual para rangos VIP
+    messages:
+      - "%prefix%&eWelcome to the server, %player%! You have received your starter reward."
+
+  # 👑 Monthly VIP Reward
   vip_reward:
     type: REPEATABLE
     cooldown: "30d"
@@ -57,5 +68,25 @@ rewards:
     commands:
       - "eco give %player% 1000"
       - "crate give %player% vip_key 1"
-```
+    messages:
+      - "%prefix%&6You have received your monthly VIP reward."
+````
+
+---
+
+## 🔍 Important Notes
+
+* **Every reward must have a unique ID.** If an ID is repeated, the plugin will only recognize the last one defined.
+* **All commands are executed from the console.** If you need to run them as the player, you can use `[PLAYER]` in custom menus (see [Item Actions](../acciones-item)).
+* **The `cooldown` field is mandatory**, even for unique rewards (`0s` is valid).
+* You can combine ZenRewards with economy systems, ranks, or crate plugins to expand its functionality.
+
+---
+
+## 🚀 Next Step
+
+Now that your rewards are configured, continue with
+👉 [Menu Configuration](../configuracion/menus)
+to learn how to visually display them in-game.
+
 ---
