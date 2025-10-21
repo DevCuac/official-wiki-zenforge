@@ -3,7 +3,7 @@ import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://zenforge.studio',
+  site: 'https://zenforge.online',
   vite: {
     plugins: [tailwindcss()],
   },
@@ -13,9 +13,6 @@ export default defineConfig({
         es: 'Zenforge Wiki',
         en: 'Zenforge Wiki',
       },
-      customCss: [
-        './src/styles/custom.css',
-      ],
       description: 'Documentación oficial de Zenforge Studio',
       favicon: '/logo.svg',
       logo: {
@@ -23,6 +20,7 @@ export default defineConfig({
       },
       customCss: [
         './src/styles/global.css',
+        './src/styles/custom.css',
       ],
       social: [
         {
@@ -149,6 +147,48 @@ export default defineConfig({
                     en: 'Introduction',
                   },
                   slug: 'plugins/zenfairy/introduccion',
+                },
+                { 
+                  label: 'Instalación',
+                  translations: {
+                    en: 'Installation',
+                  },
+                  slug: 'plugins/zenfairy/instalacion',
+                },
+                { 
+                  label: 'Souls',
+                  translations: {
+                    en: 'Souls',
+                  },
+                  slug: 'plugins/zenfairy/souls',
+                },
+                { 
+                  label: 'Menú',
+                  translations: {
+                    en: 'Menu',
+                  },
+                  slug: 'plugins/zenfairy/menu',
+                },
+                { 
+                  label: 'Acciones',
+                  translations: {
+                    en: 'Actions',
+                  },
+                  slug: 'plugins/zenfairy/acciones',
+                },
+                { 
+                  label: 'Comandos y Permisos',
+                  translations: {
+                    en: 'Permissions and Commands',
+                  },
+                  slug: 'plugins/zenfairy/permisos',
+                },
+                { 
+                  label: 'Placeholders',
+                  translations: {
+                    en: 'Placeholders',
+                  },
+                  slug: 'plugins/zenfairy/placeholders',
                 },
               ]
             },

@@ -1,0 +1,166 @@
+/* ==== Ajuste del contenedor principal después de reducir el sidebar ==== */
+@media (min-width: 72rem) {
+  /* Limitar ancho máximo general del contenido (sin afectar navbar) */
+  main.sl-container,
+  .main-pane {
+    max-width: 85rem !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* Sobrescribir la restricción del ancho central de contenido */
+  :root {
+    --sl-content-width: 70rem; /* Ajusta según gusto (por defecto 60rem) */
+  }
+
+  /* Evitar que el texto quede pegado al borde */
+  .main-pane {
+    padding-inline: 2rem !important;
+  }
+
+  .lg\:sl-flex {
+  max-width: 90%; /* o 1200px */
+  margin: 0 auto;
+  }
+  
+  /* Alinear correctamente el layout general, pero SOLO dentro del cuerpo */
+  main .lg\:sl-flex {
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+  }
+
+  /* Mantener el right-sidebar reducido */
+  .right-sidebar {
+    width: 16rem !important;
+  }
+
+  /* Ajustar la relación entre sidebar y contenido */
+  .right-sidebar-container {
+    flex: 0 0 16rem !important;
+  }
+}
+
+/* ==== Tablas Estilizadas (Zenforge Wiki) ==== */
+/* ==== Tablas Estilizadas (Zenforge Wiki) ==== */
+.markdown table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1.5rem 0;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Encabezados */
+.markdown table th {
+  background: var(--sl-color-accent);
+  color: #fff;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--sl-color-hairline);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Celdas */
+.markdown table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--sl-color-hairline);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  vertical-align: middle;
+}
+
+/* Quitar borde derecho en la última columna */
+.markdown table th:last-child,
+.markdown table td:last-child {
+  border-right: none;
+}
+
+/* Filas alternadas */
+.markdown table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Primera columna destacada */
+.markdown table td:first-child {
+  font-weight: 600;
+  font-family: "JetBrains Mono", monospace;
+  color: var(--sl-color-text-accent);
+}
+
+/* Hover elegante */
+.markdown table tr:hover td {
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease;
+}
+
+/* Bordes redondeados */
+.markdown table tr:first-child th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+.markdown table tr:first-child th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+.markdown table tr:last-child td:first-child {
+  border-bottom-left-radius: 0.5rem;
+}
+.markdown table tr:last-child td:last-child {
+  border-bottom-right-radius: 0.5rem;
+}
+
+/* ====== ESTILO DE LA TABLA BASE ====== */
+.table-container {
+  max-width: 900px;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
+  border-collapse: collapse;
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+th {
+  background: rgba(73, 112, 196, 0.226);
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Quitar borde derecho en la última columna */
+th:last-child,
+td:last-child {
+  border-right: none;
+}
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}

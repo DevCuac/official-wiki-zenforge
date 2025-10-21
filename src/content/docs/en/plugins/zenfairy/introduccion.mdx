@@ -1,128 +1,116 @@
 ---
-title: "Introducción a ZenRewards"
-description: "¡Bienvenido a ZenRewards! Descubre cómo este plugin puede transformar la lealtad de tus jugadores y potenciar la actividad en tu servidor."
+title: "Introduction to ZenFairy"
+description: "Welcome to ZenFairy! Discover how this plugin can transform exploration and reward players on your server."
 ---
 
 import { Aside, Card, CardGrid, LinkCard, Steps, FileTree } from '@astrojs/starlight/components';
 
-¡Bienvenidos a la wiki oficial de **ZenRewards**! Este plugin ha sido diseñado para transformar la conexión diaria de tus jugadores en una emocionante rutina llena de premios. Prepárate para una experiencia donde la lealtad y la constancia se recompensan, creando una comunidad más activa y comprometida.
+Welcome to the official **ZenFairy Wiki**! This plugin is designed to transform exploration in your world into an exciting and rewarding treasure hunt. Get ready for an experience where curiosity and dedication are rewarded, creating a more active and adventurous community.
 
-## Primeros Pasos
+## Getting Started
 
-Navega a las secciones clave para empezar a configurar tu servidor.
+Browse the key sections to start setting up your collectible soul system.
 
-<CardGrid>
-  <LinkCard title="Instalación" href="02-install" description="Aprende a instalar ZenRewards en tu servidor" />
-  <LinkCard title="Comandos" href="05-commands" description="Todos los comandos disponibles" />
-  <LinkCard title="Menu" href="04-menu" description="Personaliza el menú de recompensas" />
-  <LinkCard title="Placeholders" href="07-placeholders" description="Variables dinámicas con PlaceholderAPI" />
-</CardGrid>
+<CardGrid>  
+  <LinkCard title="Installation" href="installation" description="Learn how to install ZenFairy on your server." />  
+  <LinkCard title="Commands & Permissions" href="commands" description="All available commands and permissions." />  
+  <LinkCard title="Creating Souls" href="souls" description="Customize your soul types and reward menus." />  
+  <LinkCard title="Placeholders" href="placeholders" description="Dynamic variables using PlaceholderAPI." />  
+</CardGrid>  
 
-## Características Principales
+## Main Features
 
-<CardGrid>
-  <Card title="Sistema de Recompensas" icon="gift">
-    Menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango.
-  </Card>
-  
-  <Card title="Sistema de Rachas" icon="star">
-    Premia a los jugadores por su constancia al conectarse días seguidos. Crea hábitos y fideliza tu comunidad.
-  </Card>
-  
-  <Card title="PlaceholderAPI" icon="puzzle">
-    Integración completa con variables dinámicas para mostrar información en cualquier parte de tu servidor.
-  </Card>
-  
-  <Card title="Multi-versión" icon="rocket">
-    Compatible desde 1.8.8 hasta 1.21.x y futuras versiones gracias a XSeries.
-  </Card>
-</CardGrid>
+<CardGrid>  
+  <Card title="Collectible System" icon="star">  
+    Create an unlimited number of “soul types” for your players to discover and exchange for rewards in interactive menus.  
+  </Card>  
 
-## Guía de Inicio Rápido
+  <Card title="Advanced Actions" icon="puzzle">  
+    Execute commands, send titles, grant AuraSkills stats, and much more as rewards. The power is in your hands.  
+  </Card>  
 
-Sigue estos simples pasos para tener ZenRewards funcionando en minutos.
+  <Card title="PlaceholderAPI" icon="puzzle">  
+    Full integration with dynamic variables to display player progress anywhere on the server.  
+  </Card>  
 
-<Steps>
+  <Card title="Modern & Optimized" icon="rocket">  
+    Built from scratch for Minecraft 1.21 and above, ensuring maximum compatibility and performance.  
+  </Card>  
+</CardGrid>  
 
-1. **Descargar el Plugin**
-   
-   Obtén la última versión del archivo `.jar` desde nuestra página de lanzamiento oficial.
+## Quick Start Guide
 
-2. **Instalar en tu Servidor**
-   
-   Coloca el archivo `ZenRewards.jar` en la carpeta `plugins` de tu servidor.
+Follow these simple steps to get ZenFairy running in just a few minutes.
 
-   :::tip[¡Activa los Placeholders!]
-   Si tienes **PlaceholderAPI** instalado (¡muy recomendado!), las variables como `%zenrewards_streak_current%` se activarán automáticamente.
-   :::
+<Steps>  
 
-3. **Reiniciar y Configurar**
-   
-   Reinicia tu servidor por completo. Se generará la carpeta `ZenRewards` con todos los archivos de configuración listos para que los personalices a tu gusto.
+1. **Download the Plugin**
 
-</Steps>
+   Get the latest `.jar` file from our official release page.
 
-## Conceptos Clave del Plugin
+2. **Install on Your Server**
 
-ZenRewards se basa en dos sistemas principales que trabajan juntos para fomentar la retención de jugadores.
+   Place the `ZenFairy.jar` file inside your server’s `plugins` folder.
 
-### Menú de Recompensas (`/rewards`)
+3. **Restart and Configure**
 
-El corazón del plugin. Un menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango. Los ítems son inteligentes y cambian su apariencia según su estado (disponible, en cooldown, etc.).
+   Fully restart your server. The `ZenFairy` folder will be generated with all configuration files ready for you to customize.
 
-### Sistema de Rachas (`/streak`)
+</Steps>  
 
-La joya de la corona. Premia a los jugadores por su constancia al conectarse días seguidos. Este sistema es clave para crear un hábito de conexión y construir una comunidad leal.
+## Core Plugin Concepts
 
-## Estructura de Archivos Generada
+ZenFairy is based on two main systems that work together to encourage exploration.
 
-Al iniciarse por primera vez, ZenRewards creará la siguiente estructura de carpetas y archivos.
+### Soul Types
 
-<FileTree>
+The heart of the plugin. You can create `fairy.yml`, `dragon.yml`, `abyssal.yml`, etc. Each file represents a unique category of collectible souls, each with its own reward menu, sounds, animations, and actions.
 
-- ZenRewards/
-  - playerdata/
-    - uuid-del-jugador.yml
-  - **config.yml** Configuración principal
-  - menu.yml Configuración del menú de recompensas
-  - rewards.yml Definición de todas las recompensas
-  - streak-menu.yml Configuración del menú de rachas
-  - streaks.yml Configuración del sistema de rachas
+### Exchange Menu (`/souls menu <type>`)
 
-</FileTree>
+An interactive and customizable menu for each soul type. Here, players can “spend” the souls they’ve found to obtain rewards. Items are smart and change appearance depending on whether the player can afford the exchange or not.
 
-## Placeholders Destacados
+## Generated File Structure
 
-Gracias a la integración con PlaceholderAPI, puedes mostrar información dinámica en cualquier parte de tu servidor.
+Upon first launch, ZenFairy will create the following folder and file structure.
 
-| Placeholder | Descripción | Tags |
-|-------------|-------------|------|
-| `%zenrewards_streak_current%` | Muestra el número de días de racha de conexión actual del jugador | PAPI, Racha |
-| `%zenrewards_cooldown_daily_reward%` | Muestra el tiempo restante para la recompensa con ID 'daily_reward'. Si está disponible, muestra "Ready" | PAPI, Cooldown |
-| `%zenrewards_total_claimed%` | Total de recompensas reclamadas por el jugador | PAPI, Estadísticas |
+<FileTree>  
 
-:::note[Placeholder Personalizable]
-Puedes cambiar el ID `daily_reward` por el ID de cualquier recompensa configurada en `rewards.yml`.
-:::
+* ZenFairy/
 
-## Preguntas Frecuentes
+  * souls/
 
-### ¿Este plugin funciona en mi versión de Minecraft?
+    * **_example.yml** Template for creating new soul types.
+    * **fairy.yml** Default soul type.
+  * **config.yml** Main configuration (messages and location menu).
+  * player_data.yml Player data storage.
 
-¡Sí! ZenRewards está construido para ser retrocompatible. Funciona desde la versión **1.8.8 hasta la 1.21.x** y futuras. Utilizamos la librería XSeries para manejar las diferencias de materiales y sonidos entre versiones de forma automática.
+</FileTree>  
 
-### ¿Afecta al rendimiento del servidor (TPS)?
+## Featured Placeholders
 
-No. Las operaciones clave, como la actualización de los menús y el manejo de datos, están optimizadas. El sistema de actualización de cooldowns en tiempo real solo se activa para los jugadores que tienen el menú abierto, evitando cualquier carga innecesaria.
+Thanks to PlaceholderAPI integration, you can display dynamic player information.
 
-### ¿Puedo personalizar los premios?
+| Placeholder                        | Description                                                       | Tags           |
+| ---------------------------------- | ----------------------------------------------------------------- | -------------- |
+| `%zenfairy_souls_found_fairy%`     | Shows the total number of “fairy” souls the player has found.     | PAPI, Stats    |
+| `%zenfairy_souls_available_fairy%` | Shows how many “fairy” souls the player has left to exchange.     | PAPI, Progress |
+| `%zenfairy_souls_total_fairy%`     | Shows the total number of “fairy” souls that exist on the server. | PAPI, Info     |
 
-Absolutamente. Todos los premios, cooldowns, mensajes y apariencias están definidos en archivos YAML fáciles de editar. Consulta la sección de [Configuración](03-config) para más detalles.
+## Frequently Asked Questions
 
-### ¿Soporta múltiples idiomas?
+### Does this plugin work on my Minecraft version?
 
-Sí. Todos los mensajes son configurables en `config.yml` y puedes traducirlos al idioma que prefieras. Además, soporta colores y formato usando códigos de Minecraft estándar.
+ZenFairy is specifically designed for **Minecraft 1.21 and above**. It is not compatible with older versions as it uses the latest, most efficient Paper APIs.
 
-:::tip[¿Necesitas ayuda?]
-Únete a nuestro [Discord](https://discord.gg/zenforge) para soporte directo y comparte tus configuraciones con la comunidad.
-:::
+### Does it affect server performance (TPS)?
+
+No. ZenFairy is highly optimized. Soul animations use “marker” ArmorStands that have minimal impact on performance, and all other operations are designed to be as lightweight as possible.
+
+### Can I customize the rewards?
+
+Absolutely! You have full control. Each soul type has its own configuration file where you can define the menu and actions for each reward, including executing commands, granting AuraSkills stats, and more.
+
+### Does it support multiple languages?
+
+Yes. All player-visible messages can be customized in `config.yml`, allowing you to translate the plugin into any language.

@@ -1,46 +1,46 @@
 ---
-title: "Introducción a ZenRewards"
-description: "¡Bienvenido a ZenRewards! Descubre cómo este plugin puede transformar la lealtad de tus jugadores y potenciar la actividad en tu servidor."
+title: "Introducción a ZenFairy"
+description: "¡Bienvenido a ZenFairy! Descubre cómo este plugin puede transformar la exploración y recompensar a los jugadores en tu servidor."
 ---
 
 import { Aside, Card, CardGrid, LinkCard, Steps, FileTree } from '@astrojs/starlight/components';
 
-¡Bienvenidos a la wiki oficial de **ZenRewards**! Este plugin ha sido diseñado para transformar la conexión diaria de tus jugadores en una emocionante rutina llena de premios. Prepárate para una experiencia donde la lealtad y la constancia se recompensan, creando una comunidad más activa y comprometida.
+¡Bienvenidos a la wiki oficial de **ZenFairy**! Este plugin ha sido diseñado para transformar la exploración de tu mundo en una emocionante y gratificante búsqueda del tesoro. Prepárate para una experiencia donde la curiosidad y la dedicación se premian, creando una comunidad más activa y aventurera.
 
 ## Primeros Pasos
 
-Navega a las secciones clave para empezar a configurar tu servidor.
+Navega a las secciones clave para empezar a configurar tu sistema de almas coleccionables.
 
 <CardGrid>
-  <LinkCard title="Instalación" href="02-install" description="Aprende a instalar ZenRewards en tu servidor" />
-  <LinkCard title="Comandos" href="05-commands" description="Todos los comandos disponibles" />
-  <LinkCard title="Menu" href="04-menu" description="Personaliza el menú de recompensas" />
-  <LinkCard title="Placeholders" href="07-placeholders" description="Variables dinámicas con PlaceholderAPI" />
+  <LinkCard title="Instalación" href="instalacion" description="Aprende a instalar ZenFairy en tu servidor." />
+  <LinkCard title="Comandos y Permisos" href="comandos" description="Todos los comandos y permisos disponibles." />
+  <LinkCard title="Creando Almas" href="souls" description="Personaliza tus tipos de almas y menús de recompensa." />
+  <LinkCard title="Placeholders" href="placeholders" description="Variables dinámicas con PlaceholderAPI." />
 </CardGrid>
 
 ## Características Principales
 
 <CardGrid>
-  <Card title="Sistema de Recompensas" icon="gift">
-    Menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango.
+  <Card title="Sistema de Coleccionables" icon="star">
+    Crea una cantidad ilimitada de "tipos de almas" para que tus jugadores las encuentren y las intercambien por recompensas en menús interactivos.
   </Card>
   
-  <Card title="Sistema de Rachas" icon="star">
-    Premia a los jugadores por su constancia al conectarse días seguidos. Crea hábitos y fideliza tu comunidad.
+  <Card title="Acciones Avanzadas" icon="puzzle">
+    Ejecuta comandos, envía títulos, da stats de AuraSkills y mucho más como recompensa. El poder está en tus manos.
   </Card>
-  
+
   <Card title="PlaceholderAPI" icon="puzzle">
-    Integración completa con variables dinámicas para mostrar información en cualquier parte de tu servidor.
+    Integración completa con variables dinámicas para mostrar el progreso de los jugadores en cualquier lugar del servidor.
   </Card>
-  
-  <Card title="Multi-versión" icon="rocket">
-    Compatible desde 1.8.8 hasta 1.21.x y futuras versiones gracias a XSeries.
+
+  <Card title="Moderno y Optimizado" icon="rocket">
+    Construido desde cero para Minecraft 1.21 en adelante, asegurando la máxima compatibilidad y rendimiento.
   </Card>
 </CardGrid>
 
 ## Guía de Inicio Rápido
 
-Sigue estos simples pasos para tener ZenRewards funcionando en minutos.
+Sigue estos simples pasos para tener ZenFairy funcionando en minutos.
 
 <Steps>
 
@@ -50,79 +50,75 @@ Sigue estos simples pasos para tener ZenRewards funcionando en minutos.
 
 2. **Instalar en tu Servidor**
    
-   Coloca el archivo `ZenRewards.jar` en la carpeta `plugins` de tu servidor.
+   Coloca el archivo `ZenFairy.jar` en la carpeta `plugins` de tu servidor.
 
-   :::tip[¡Activa los Placeholders!]
-   Si tienes **PlaceholderAPI** instalado (¡muy recomendado!), las variables como `%zenrewards_streak_current%` se activarán automáticamente.
+   :::tip[¡Activa las Integraciones!]
+   Si tienes **PlaceholderAPI** y/o **AuraSkills** instalados, ¡las funciones avanzadas como placeholders y recompensas de stats se activarán automáticamente!
    :::
 
 3. **Reiniciar y Configurar**
    
-   Reinicia tu servidor por completo. Se generará la carpeta `ZenRewards` con todos los archivos de configuración listos para que los personalices a tu gusto.
+   Reinicia tu servidor por completo. Se generará la carpeta `ZenFairy` con todos los archivos de configuración listos para que los personalices a tu gusto.
 
 </Steps>
 
 ## Conceptos Clave del Plugin
 
-ZenRewards se basa en dos sistemas principales que trabajan juntos para fomentar la retención de jugadores.
+ZenFairy se basa en dos sistemas principales que trabajan juntos para fomentar la exploración.
 
-### Menú de Recompensas (`/rewards`)
+### Tipos de Almas
+El corazón del plugin. Puedes crear `fairy.yml`, `dragon.yml`, `abyssal.yml`, etc. Cada archivo representa una categoría única de almas coleccionables, cada una con su propio menú de recompensas, sonidos, animaciones y acciones.
 
-El corazón del plugin. Un menú totalmente personalizable donde los jugadores pueden reclamar premios diarios, semanales, únicos o por rango. Los ítems son inteligentes y cambian su apariencia según su estado (disponible, en cooldown, etc.).
-
-### Sistema de Rachas (`/streak`)
-
-La joya de la corona. Premia a los jugadores por su constancia al conectarse días seguidos. Este sistema es clave para crear un hábito de conexión y construir una comunidad leal.
+### Menú de Intercambio (`/souls menu <tipo>`)
+Un menú interactivo y personalizable para cada tipo de alma. Aquí, los jugadores pueden "gastar" las almas que han encontrado para obtener recompensas. Los ítems son inteligentes y cambian su apariencia si el jugador puede permitirse el intercambio o no.
 
 ## Estructura de Archivos Generada
 
-Al iniciarse por primera vez, ZenRewards creará la siguiente estructura de carpetas y archivos.
+Al iniciarse por primera vez, ZenFairy creará la siguiente estructura de carpetas y archivos.
 
 <FileTree>
 
-- ZenRewards/
-  - playerdata/
-    - uuid-del-jugador.yml
-  - **config.yml** Configuración principal
-  - menu.yml Configuración del menú de recompensas
-  - rewards.yml Definición de todas las recompensas
-  - streak-menu.yml Configuración del menú de rachas
-  - streaks.yml Configuración del sistema de rachas
+- ZenFairy/
+  - souls/
+    - **_example.yml** Plantilla para crear nuevos tipos de almas.
+    - **fairy.yml** El tipo de alma por defecto.
+  - **config.yml** Configuración principal (mensajes y menú de localizaciones).
+  - player_data.yml Almacenamiento de los datos de los jugadores.
 
 </FileTree>
 
 ## Placeholders Destacados
 
-Gracias a la integración con PlaceholderAPI, puedes mostrar información dinámica en cualquier parte de tu servidor.
+Gracias a la integración con PlaceholderAPI, puedes mostrar información dinámica de los jugadores.
 
 | Placeholder | Descripción | Tags |
 |-------------|-------------|------|
-| `%zenrewards_streak_current%` | Muestra el número de días de racha de conexión actual del jugador | PAPI, Racha |
-| `%zenrewards_cooldown_daily_reward%` | Muestra el tiempo restante para la recompensa con ID 'daily_reward'. Si está disponible, muestra "Ready" | PAPI, Cooldown |
-| `%zenrewards_total_claimed%` | Total de recompensas reclamadas por el jugador | PAPI, Estadísticas |
+| `%zenfairy_souls_found_fairy%` | Muestra el número total de almas de tipo "fairy" que el jugador ha encontrado. | PAPI, Estadísticas |
+| `%zenfairy_souls_available_fairy%` | Muestra cuántas almas de tipo "fairy" le quedan al jugador para intercambiar. | PAPI, Progreso |
+| `%zenfairy_souls_total_fairy%` | Muestra la cantidad total de almas de tipo "fairy" que existen en el servidor. | PAPI, Información |
 
 :::note[Placeholder Personalizable]
-Puedes cambiar el ID `daily_reward` por el ID de cualquier recompensa configurada en `rewards.yml`.
+Puedes cambiar `fairy` por el ID de cualquier tipo de alma que hayas creado (ej: `dragon`, `abyssal`, etc.).
 :::
 
 ## Preguntas Frecuentes
 
 ### ¿Este plugin funciona en mi versión de Minecraft?
 
-¡Sí! ZenRewards está construido para ser retrocompatible. Funciona desde la versión **1.8.8 hasta la 1.21.x** y futuras. Utilizamos la librería XSeries para manejar las diferencias de materiales y sonidos entre versiones de forma automática.
+ZenFairy está diseñado específicamente para **Minecraft 1.21 en adelante**. No es compatible con versiones anteriores, ya que utiliza las APIs más modernas y eficientes de Paper.
 
 ### ¿Afecta al rendimiento del servidor (TPS)?
 
-No. Las operaciones clave, como la actualización de los menús y el manejo de datos, están optimizadas. El sistema de actualización de cooldowns en tiempo real solo se activa para los jugadores que tienen el menú abierto, evitando cualquier carga innecesaria.
+No. ZenFairy está altamente optimizado. La animación de las almas utiliza ArmorStands de tipo "marker" que tienen un impacto mínimo en el rendimiento, y el resto de operaciones están diseñadas para ser lo más ligeras posible.
 
-### ¿Puedo personalizar los premios?
+### ¿Puedo personalizar las recompensas?
 
-Absolutamente. Todos los premios, cooldowns, mensajes y apariencias están definidos en archivos YAML fáciles de editar. Consulta la sección de [Configuración](03-config) para más detalles.
+¡Absolutamente! Tienes control total. Cada tipo de alma tiene su propio archivo de configuración donde defines el menú y las acciones para cada recompensa, incluyendo ejecutar comandos, dar stats de AuraSkills, etc.
 
 ### ¿Soporta múltiples idiomas?
 
-Sí. Todos los mensajes son configurables en `config.yml` y puedes traducirlos al idioma que prefieras. Además, soporta colores y formato usando códigos de Minecraft estándar.
+Sí. Todos los mensajes visibles para el jugador son configurables en `config.yml`, permitiéndote traducir el plugin a cualquier idioma.
 
 :::tip[¿Necesitas ayuda?]
-Únete a nuestro [Discord](https://discord.gg/zenforge) para soporte directo y comparte tus configuraciones con la comunidad.
+Únete a nuestro [Discord](https://discord.gg/zenforge) para soporte directo, comparte tus configuraciones y sugiere nuevas ideas para ZenFairy.
 :::

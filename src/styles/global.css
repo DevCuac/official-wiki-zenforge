@@ -306,66 +306,6 @@
     background: var(--sl-color-gray-1);
   }
   
-  /* Tablas con soporte de temas */
-  table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: 1.5rem 0;
-    border-radius: var(--sl-border-radius);
-    overflow: hidden;
-    border: 1px solid var(--sl-color-border);
-    background: var(--sl-color-bg);
-  }
-  
-  thead {
-    background: var(--sl-color-accent);
-    color: white;
-  }
-  
-  thead th {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    letter-spacing: 0.05em;
-  }
-  
-  th, td {
-    padding: 1rem 1.25rem;
-    text-align: left;
-    border-bottom: 1px solid var(--sl-color-border);
-    color: var(--sl-color-text);
-  }
-  
-  thead th {
-    color: white;
-    border-bottom: none;
-  }
-  
-  tbody tr {
-    background: var(--sl-color-bg);
-    transition: background-color 0.2s ease;
-  }
-  
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
-  
-  tbody tr:hover {
-    background: var(--sl-color-gray-1);
-  }
-  
-  /* Alinear primera columna a la izquierda */
-  td:first-child,
-  th:first-child {
-    padding-left: 1.5rem;
-  }
-  
-  td:last-child,
-  th:last-child {
-    padding-right: 1.5rem;
-  }
-  
   /* Botones con soporte de temas */
   .btn {
     display: inline-block;
