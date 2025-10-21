@@ -7,7 +7,7 @@ The `souls/` folder is the heart of ZenFairy and controls all the **logic behind
 Each `.yml` file you create here defines a new soul type — its rewards, its menu, and how it interacts with the world.
 
 This system allows you to create unique collection experiences for different zones, events, or player ranks on your server.
-
+ 
 ---
 
 ## ⚙️ General Structure
